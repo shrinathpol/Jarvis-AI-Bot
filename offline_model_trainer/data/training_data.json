@@ -1,0 +1,6 @@
+{
+    "training_data": [
+    {"feature_1": 0.5, "feature_2": 0.8, "label": 1},
+    {"feature_1": 0.2, "feature_2": 0.3, "label": 0}
+]
+}

@@ -1,0 +1,19 @@
+file: offline_model_trainer/config.yaml
+
+training:
+  batch_size: 32
+  epochs: 50
+  learning_rate: 0.001
+  validation_split: 0.2
+
+paths:
+  training_data: data/training_data.json
+  validation_data: data/validation_data.json
+  model_output: models/offline_model.pkl
+
+model:
+  architecture: "your_model_architecture_here"
+  input_shape: [input_shape_here]
+  output_shape: [output_shape_here]
+  loss_function: "your_loss_function_here"
+  metrics: ["accuracy"]

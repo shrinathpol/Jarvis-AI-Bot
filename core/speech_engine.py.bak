@@ -1,0 +1,48 @@
+# Jarvis/core/speech_engine.py
+import speech_recognition as sr
+import pyttsx3
+import pyaudio
+import re # We need to import the 're' (regular expression) module for filtering
+
+# Initialize the speech engine
+
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id)
+
+def speak(text):
+    """
+    Speaks the given text using the initialized engine after cleaning it.
+    """
+    # 1. Clean the text before speaking
+    # This regular expression keeps only alphanumeric characters and spaces
+    clean_text = re.sub(r'[^a-zA-Z0-9\s.,?!]', '', text)
+
+    print(f"Jarvis: {clean_text}")     
+    engine.say(clean_text)
+    engine.runAndWait()
+
+def take_command():
+    """Listens for a command from the user and returns the text."""
+    r = sr.Recognizer()
+    
+    # Replace '7' with the device index of your microphone
+    mic_index = 1 # This is likely your built-in mic. Try 1, 15, or 16 if it doesn't work.
+    
+    with sr.Microphone(device_index=mic_index) as source:
+        print("Listening...")
+        r.pause_threshold = 1.5
+        r.adjust_for_ambient_noise(source, duration=2)
+        audio = r.listen(source)
+
+    try:
+        print("Recognizing...")
+        query = r.recognize_google(audio, language='en-in')
+        print(f"User said: {query}\n")
+        return query
+    except sr.UnknownValueError:
+        print("Could not understand audio.")
+        return "none"
+    except sr.RequestError as e:
+        print(f"Could not request results from Google Speech Recognition service; {e}")
+        return "none"

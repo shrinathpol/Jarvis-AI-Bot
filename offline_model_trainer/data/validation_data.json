@@ -1,0 +1,2068 @@
+{
+    "validation_data": [
+        {
+            "input": "Explain the fundamental working principle of a CNC machine.",
+            "expected_output": "A CNC machine operates based on numerical control, where pre-programmed software dictates the movement of tools and machinery. This allows for precise and automated manufacturing processes."
+        },
+        {
+            "input": "Describe the basic structure of a CNC machine.",
+            "expected_output": "The basic structure includes a machine base, worktable, spindle, cutting tool, and a control unit. The control unit interprets the program and controls the movement of the machine components."
+        },
+        {
+            "input": "What are the key procedures involved in operating a CNC machine?",
+            "expected_output": "Key procedures include CAD/CAM design, program creation (G-code), machine setup (tooling, workpiece), program execution, and quality control."
+        },
+        {
+            "input": "List the basic steps to guide someone in using a CNC machine.",
+            "expected_output": "1. Understand CNC machine components. 2. Learn CAD/CAM software. 3. Generate G-code. 4. Set up the machine. 5. Run the program and monitor. 6. Inspect the finished part."
+        },
+        {
+            "input": "Define the term 'G-code' in the context of CNC machines.",
+            "expected_output": "G-code is a programming language used to control CNC machines. It contains instructions for machine movements, speeds, and other parameters."
+        },
+        {
+            "input": "Explain the function of the spindle in a CNC milling machine.",
+            "expected_output": "The spindle holds and rotates the cutting tool in a CNC milling machine. Its speed and accuracy are critical for achieving the desired surface finish and dimensional accuracy."
+        },
+        {
+            "input": "Describe the purpose of the worktable in a CNC machine.",
+            "expected_output": "The worktable is a platform where the workpiece is securely mounted. It can move along multiple axes to position the workpiece relative to the cutting tool."
+        },
+        {
+            "input": "What is the role of the control unit in a CNC machine?",
+            "expected_output": "The control unit, also known as the CNC controller, is the brain of the machine. It reads and interprets the G-code program and sends signals to the machine's motors and other components to execute the programmed instructions."
+        },
+        {
+            "input": "Explain the difference between open-loop and closed-loop CNC systems.",
+            "expected_output": "In an open-loop system, the controller sends a signal to the motor, but there is no feedback to confirm that the desired movement has been achieved. In a closed-loop system, feedback devices (e.g., encoders) monitor the actual position and speed, allowing the controller to make corrections and ensure accuracy."
+        },
+        {
+            "input": "What are some common types of CNC machines?",
+            "expected_output": "Common types include CNC milling machines, CNC lathes, CNC routers, CNC grinders, and CNC EDM machines. Each type is designed for specific machining operations."
+        },
+        {
+            "input": "What does VEVOR stand for in relation to tools?",
+            "expected_output": "VEVOR uses expressions like 'Save Half' or 'Half Price' to represent an estimate of savings compared to major top brands."
+        },
+        {
+            "input": "What is the primary function of the VEVOR Laser Engraving Machine?",
+            "expected_output": "The VEVOR Laser Engraving Machine is suitable for engraving logos and other consumer products on applicable substrates using a powerful laser beam."
+        },
+        {
+            "input": "What type of laser does the VEVOR engraver use?",
+            "expected_output": "The VEVOR engraver uses a CO2 glass laser, specifically a glass tube filled with insulating carbon dioxide (CO2)."
+        },
+        {
+            "input": "How does the laser beam reach the material in the VEVOR engraver?",
+            "expected_output": "The laser beam is emitted from a CO2 glass tube, reflects off three mirrors, and then passes through a focusing lens to etch the design onto the material."
+        },
+        {
+            "input": "What are the three mirrors used for in the VEVOR laser engraver?",
+            "expected_output": "The first mirror is fixed near the laser tube, the second mirror travels along the Y-axis, and the third mirror is attached to the laser head traveling along the X-axis."
+        },
+        {
+            "input": "Why do the mirrors in the laser engraver need frequent cleaning and periodic readjustment?",
+            "expected_output": "Dust from the engraving process settles on the mirrors, requiring frequent cleaning. Since they move during operation, they also need periodic readjustment to maintain the correct laser path."
+        },
+        {
+            "input": "What systems are necessary for the safe operation of the VEVOR laser engraver?",
+            "expected_output": "A water-cooled system (pump or cooler) and an exhaust system (external vent or air purifier) are absolutely necessary for safe operation."
+        },
+        {
+            "input": "What is the recommended power setting range for optimal performance and longevity of the laser tube?",
+            "expected_output": "It is recommended to set the laser at 10-70% of its maximum rated power for optimal performance and longevity. Running consistently above 70% will significantly shorten its lifespan."
+        },
+        {
+            "input": "Why is it recommended to only touch components with one hand at a time on the VEVOR engraver?",
+            "expected_output": "This is a high-voltage device, and for safety reasons, it is recommended to only touch its components with one hand at a time during use."
+        },
+        {
+            "input": "Is the active laser beam visible to the human eye?",
+            "expected_output": "No, active lasers are invisible to the human eye."
+        },
+        {
+            "input": "What is the purpose of the viewing window on the VEVOR engraver?",
+            "expected_output": "The viewing window is a tan acrylic window that allows monitoring of the engraving process, but it only partially absorbs the high infrared laser and offers no other protection. Protective glasses should always be worn."
+        },
+        {
+            "input": "What is the function of the LED light on the VEVOR engraver?",
+            "expected_output": "The LED light illuminates the workbench for a clear view of the material engraving before, during, and after work."
+        },
+        {
+            "input": "What do the Y-axis guides do on the VEVOR engraver?",
+            "expected_output": "Y-axis guides allow X-axis guides to move back and forth on the table."
+        },
+        {
+            "input": "What is the purpose of the water cooling switch?",
+            "expected_output": "After the water cooling switch is activated, the built-in water cooling starts, and the real-time temperature display lights up."
+        },
+        {
+            "input": "What does the X-Axis Rail do?",
+            "expected_output": "The X-Axis Rail holds the second mirror and supports the laser head to move left and right."
+        },
+        {
+            "input": "How do you fill the built-in circulating water tank?",
+            "expected_output": "The water inlet is used to unscrew the lid counterclockwise when filling the built-in circulating water tank."
+        },
+        {
+            "input": "What do the colors on the water level display indicate?",
+            "expected_output": "Yellow indicates the water level is too high, green indicates it is suitable, and red indicates it is too low."
+        },
+        {
+            "input": "What is the purpose of the Front Straight Door?",
+            "expected_output": "This door opens to allow larger materials to pass through the work bed. Extreme care must be taken to avoid laser exposure."
+        },
+        {
+            "input": "What is the Front Access Door used for?",
+            "expected_output": "This door provides access to the area below the bench for easy cleaning."
+        },
+        {
+            "input": "What happens when the engraver's canopy (lid) is opened during operation?",
+            "expected_output": "When the lid is opened, the power of the laser is automatically cut off."
+        },
+        {
+            "input": "What do the red and green lights on the working indicator mean?",
+            "expected_output": "Red light indicates the laser is working, and green light indicates the laser is idle."
+        },
+        {
+            "input": "What is the main function of the control panel?",
+            "expected_output": "The control panel provides manual control of the engraving process, including movement of the laser head and laser emission."
+        },
+        {
+            "input": "What is the purpose of the main switch?",
+            "expected_output": "The main switch controls the total power of the entire machine."
+        },
+        {
+            "input": "How do the Z-Axis Control Switches function?",
+            "expected_output": "These buttons move the table up or down to adapt and focus on various thicknesses of material."
+        },
+        {
+            "input": "What are the connection ports used for?",
+            "expected_output": "These ports connect the main board of the engraving machine to the control computer and its engraving software via a USB or Ethernet cable."
+        },
+        {
+            "input": "What is the Right Access Door for?",
+            "expected_output": "This door provides access to the motherboard, motor drivers, and power supply. Its vents should not be obstructed."
+        },
+        {
+            "input": "What is the function of the Motherboard cooling fan?",
+            "expected_output": "This fan is used for heat dissipation of core appliances such as built-in motherboards and laser power supplies."
+        },
+        {
+            "input": "What is the purpose of the Emergency Stop Switch?",
+            "expected_output": "In case of emergency, this button immediately cuts off all power to the laser tube."
+        },
+        {
+            "input": "What does the Laser Head contain?",
+            "expected_output": "The laser head holds the 3rd mirror, focusing lens, red dot guidance, and air assist outlet."
+        },
+        {
+            "input": "How can the table height be adjusted?",
+            "expected_output": "Table height can be adjusted to accommodate thinner and thicker materials, as well as between aluminum and cellular platforms."
+        },
+        {
+            "input": "When must the Laser Control Switch be turned on?",
+            "expected_output": "This switch must be turned on when using a laser."
+        },
+        {
+            "input": "What is the Light switch for?",
+            "expected_output": "The light switch turns on the light on the workbench."
+        },
+        {
+            "input": "What is the Rotary axis switch used for?",
+            "expected_output": "This switch must be turned on when using the rotary axis (off when not in use). If the Y-axis is not moving, check if this switch is off."
+        },
+        {
+            "input": "What is the Power Input connection?",
+            "expected_output": "This power connector must be connected before using the machine."
+        },
+        {
+            "input": "What is behind the Top Rear Access Door?",
+            "expected_output": "This door leads to the laser bay where the laser tube and its connections are secured."
+        },
+        {
+            "input": "What is the Rear Door equivalent to?",
+            "expected_output": "This door is the equivalent of a front door and requires similar care during use."
+        },
+        {
+            "input": "What does the Lower Rear Access Door provide access to?",
+            "expected_output": "This door provides access to the air assist pump and Z-axis belt."
+        },
+        {
+            "input": "What is the function of the Exhaust fan?",
+            "expected_output": "This fan extracts gas and debris from the air from the workbench and sends the air out after being purified by an eco-friendly filter."
+        },
+        {
+            "input": "What is the Water Tank Cooling Fan used for?",
+            "expected_output": "This fan is used to cool the circulating water."
+        },
+        {
+            "input": "Describe the Laser tube (component A in the diagram).",
+            "expected_output": "This glass tube filled with carbon dioxide is mounted on a bracket and cannot be moved. The connection voltage between it and the laser power supply is extremely high and extremely dangerous."
+        },
+        {
+            "input": "Describe the First reflector (component B in the diagram).",
+            "expected_output": "This adjustable angle mirror is held in place to transfer the engraving laser from the tube to the second mirror."
+        },
+        {
+            "input": "Describe the Second mirror (component C in the diagram).",
+            "expected_output": "This adjustable angle mirror moves along the X-axis guide to allow the laser beam to travel along the Y-axis."
+        },
+        {
+            "input": "Describe the Third mirror (component D in the diagram).",
+            "expected_output": "This angle-adjustable mirror moves with the laser head, allowing the laser beam to travel along the X-axis."
+        },
+        {
+            "input": "Describe the Focusing Lens (component E in the diagram).",
+            "expected_output": "This lens directs and focuses the laser light onto the material."
+        },
+        {
+            "input": "Describe the Workbench (component F in the diagram).",
+            "expected_output": "The height of the exposed workbench can be adjusted."
+        },
+        {
+            "input": "What is the USB Line Port (component A in the diagram) used for?",
+            "expected_output": "This port uses any of its USB ports to connect to the control computer and its engraving software."
+        },
+        {
+            "input": "What is the USB Port (component B in the diagram) used for?",
+            "expected_output": "This port allows you to load and save designs and parameters directly to the engraver."
+        },
+        {
+            "input": "What is the Ethernet port (component C in the diagram) used for?",
+            "expected_output": "This port connects directly or via the Internet to the control computer and its software."
+        },
+        {
+            "input": "What is the Laser Head Third Mirror (component A in the diagram) for?",
+            "expected_output": "This angle-adjustable mirror transmits laser light from the second mirror to the focusing lens."
+        },
+        {
+            "input": "What is the X-axis guide (component B in the diagram) for?",
+            "expected_output": "This guide moves along the Y-axis, and its movement is controlled by a limit switch."
+        },
+        {
+            "input": "What is Air Assist (component C in the diagram) for?",
+            "expected_output": "This device blows pressurized air to kill sparks and blow away gases and debris while engraving."
+        },
+        {
+            "input": "What is the Red Dot Pointer (component E in the diagram) for?",
+            "expected_output": "This device helps you see the exact location of the invisible engraving laser."
+        },
+        {
+            "input": "What is the Laser (component F in the diagram) itself?",
+            "expected_output": "The engraving laser itself is invisible, but very dangerous. Direct contact with skin or eyes should be avoided."
+        },
+        {
+            "input": "What is the Motherboard (component A in the diagram) in the right access door?",
+            "expected_output": "This board controls the engraving process and responds to commands from the engraving software or the machine's control panel."
+        },
+        {
+            "input": "What is the X-axis driver (component B in the diagram) for?",
+            "expected_output": "This device moves the laser head along the X-rail."
+        },
+        {
+            "input": "What is the Y-axis drive (component C in the diagram) for?",
+            "expected_output": "This device moves the X-rail along the Y-rail."
+        },
+        {
+            "input": "What is Laser Power (component D in the diagram) for?",
+            "expected_output": "This device converts standard electricity into the extremely high voltage charge required for a laser tube."
+        },
+        {
+            "input": "What is the Power Supply (component E in the diagram) for?",
+            "expected_output": "This device powers the machine's motherboard and drives."
+        },
+        {
+            "input": "What is the High-voltage wire (component A in the diagram) of the laser power supply?",
+            "expected_output": "This wire is connected to the anode or positive end of the laser tube and provides high-voltage current to power the laser."
+        },
+        {
+            "input": "What are the Mounting Holes (component B in the diagram) on the laser power supply for?",
+            "expected_output": "These standard slots allow for simple installation and removal."
+        },
+        {
+            "input": "What is the Reset button on the control panel for?",
+            "expected_output": "The Reset button performs a system reset."
+        },
+        {
+            "input": "What does the Stop button on the control panel do?",
+            "expected_output": "The Stop button stops machining or motor shaft movement."
+        },
+        {
+            "input": "What is the Delete key on the control panel for?",
+            "expected_output": "This parameter is used to delete the parameter."
+        },
+        {
+            "input": "What is the Origin (Anchor key) on the control panel for?",
+            "expected_output": "The Origin (Anchor key) is used to set the anchor point."
+        },
+        {
+            "input": "What is the Pulse (Point Shot Button) on the control panel for?",
+            "expected_output": "The Pulse (Point Shot Button) makes the laser tube point to the light."
+        },
+        {
+            "input": "What is the Enter (OK key) on the control panel for?",
+            "expected_output": "The Enter (OK key) is used for user confirmation."
+        },
+        {
+            "input": "What is the Focus (Autofocus key) on the control panel for?",
+            "expected_output": "The Focus (Autofocus key) automatically finds the focus point."
+        },
+        {
+            "input": "What does the Speed key on the control panel do?",
+            "expected_output": "The Speed key sets the current machining speed value."
+        },
+        {
+            "input": "What do the Z-axis keys (Z↑ Z↓) on the control panel do?",
+            "expected_output": "These keys are used to move the Z-axis."
+        },
+        {
+            "input": "What do the U-axis keys (U+ U-) on the control panel do?",
+            "expected_output": "These keys are used to move the U-axis."
+        },
+        {
+            "input": "What is the St/Pau (Start/Pause key) on the control panel for?",
+            "expected_output": "The St/Pau (Start/Pause key) starts work or pauses/restarts work."
+        },
+        {
+            "input": "What is the Decimal Point key on the control panel used for?",
+            "expected_output": "The Decimal Point key is used to set parameters with decimals."
+        },
+        {
+            "input": "What is the Power button on the control panel used for?",
+            "expected_output": "The Power button sets the current maximum and minimum power values."
+        },
+        {
+            "input": "What is the Jog/Continuous Key on the control panel for?",
+            "expected_output": "The Jog/Continuous Key switches between jog motion and continuous motion."
+        },
+        {
+            "input": "What do the Shift (Toggle keys) on the control panel do?",
+            "expected_output": "The Shift (Toggle keys) combine with number keys to form key combinations or toggle special functions."
+        },
+        {
+            "input": "What does the Esc (Exit key) on the control panel do?",
+            "expected_output": "The Esc (Exit key) returns to the previous menu, canceling parameter settings."
+        },
+        {
+            "input": "What are the Menu keys on the control panel for?",
+            "expected_output": "The Menu keys access user parameters, manufacturer parameters, language settings, etc."
+        },
+        {
+            "input": "What is the Frame (Border Key) on the control panel for?",
+            "expected_output": "The Frame (Border Key) performs a boundary traversal operation on the file being processed."
+        },
+        {
+            "input": "What are the File Keys on the control panel for?",
+            "expected_output": "The File Keys manage memory files and USB flash drive files."
+        },
+        {
+            "input": "What does the Graphical display area on the control panel show?",
+            "expected_output": "It displays the track and running track of the entire file."
+        },
+        {
+            "input": "What does the Version Number area on the control panel display?",
+            "expected_output": "It displays the version number of the panel and motherboard."
+        },
+        {
+            "input": "What does the System Time area on the control panel display?",
+            "expected_output": "It displays the current system time."
+        },
+        {
+            "input": "What does the Parameter display area on the control panel show?",
+            "expected_output": "It displays the file number, speed, maximum power, etc., of the running file."
+        },
+        {
+            "input": "What does the Coordinate Display Area on the control panel show?",
+            "expected_output": "It displays the current coordinates of the laser head."
+        },
+        {
+            "input": "What does the Layer Display Area on the control panel show?",
+            "expected_output": "It displays the layer parameters of the current or preview file, including layer number, color, speed, and maximum power."
+        },
+        {
+            "input": "What does the Frame Size Processed area on the control panel display?",
+            "expected_output": "It displays the dimensions of the current file."
+        },
+        {
+            "input": "What does the Number of Pieces area on the control panel display?",
+            "expected_output": "It displays the count of completed runs for the current file."
+        },
+        {
+            "input": "What does the System Status area on the control panel display?",
+            "expected_output": "It displays the current status of the machine: idle, running, paused, or completed, along with the processing time."
+        },
+        {
+            "input": "What does the Processing Progress Bar on the control panel display?",
+            "expected_output": "It displays the progress of the current file."
+        },
+        {
+            "input": "What is the recommended operating temperature for the VEVOR laser engraver?",
+            "expected_output": "The recommended operating temperature is between 10°C and 38°C (50°F and 100.4°F)."
+        },
+        {
+            "input": "What is the recommended storage temperature for the VEVOR laser engraver?",
+            "expected_output": "The recommended storage temperature is between -10°C and 35°C (14°F and 95°F)."
+        },
+        {
+            "input": "What is the recommended storage humidity for the VEVOR laser engraver?",
+            "expected_output": "The recommended storage humidity is between 20%RH and 80%RH."
+        },
+        {
+            "input": "How often should the rails of the engraving machine be cleaned and lubricated?",
+            "expected_output": "For best results, clean and lubricate the rails of the engraving machine every two weeks."
+        },
+        {
+            "input": "What materials are safe to use with the VEVOR laser engraving machine?",
+            "expected_output": "Safe materials include plastics (ABS, Nylon, Polyethylene, BoPET, PETG, Polyimide, PMMA, POM, Polypropylene, Styrene), cardboard, ceramics, glass, leather, paper, rubber, stone, textiles, and timber."
+        },
+        {
+            "input": "What materials should NOT be used with the VEVOR laser engraving machine?",
+            "expected_output": "Materials containing hexavalent chromium, Astatine, Beryllium oxide, Bromine, Chlorine (including PVC), Fluorine (including Teflon), Iodine, Metals, and Phenolic resins should not be used due to toxic fumes or other hazards."
+        },
+        {
+            "input": "What is the recommended resolution for engraving?",
+            "expected_output": "The resolution should generally be set to 500 dots per inch."
+        },
+        {
+            "input": "What is the minimum power threshold for laser emission?",
+            "expected_output": "The minimum threshold is 10%. The laser will not be emitted at any setting lower than this."
+        },
+        {
+            "input": "What is the maximum recommended power for prolonged laser use?",
+            "expected_output": "The recommended maximum power is set at 70%, as prolonged use of more than this amount will shorten the lifetime of the laser."
+        },
+        {
+            "input": "How can engraving depth be increased?",
+            "expected_output": "To increase the engraving depth, increase the energy per unit area by increasing the laser's power or number of rings, or by slowing down the speed parameter."
+        },
+        {
+            "input": "What type of water is recommended for the water cooling system?",
+            "expected_output": "Clean distilled water or purified water is recommended. Tap water or sewage should not be used as it reduces service life."
+        },
+        {
+            "input": "What is the maximum recommended water temperature for the cooling system?",
+            "expected_output": "The water temperature should not exceed 100°F (38°C). If this temperature is reached, stop working until it cools down."
+        },
+        {
+            "input": "What should be done if the water temperature is about to drop below 0 degrees Celsius?",
+            "expected_output": "Replace the water with an antifreeze liquid to avoid damage to the carbon dioxide glass laser tube."
+        },
+        {
+            "input": "What is the purpose of the air assist feature?",
+            "expected_output": "Air Assist blows pressurized air to kill sparks and blow away gases and debris while engraving."
+        },
+        {
+            "input": "How often should the main engraving compartment be cleaned?",
+            "expected_output": "It should be checked at least once a day for dust accumulation, and removed if present. Cleaning intervals depend on material and operating time."
+        },
+        {
+            "input": "How should the viewing window be cleaned?",
+            "expected_output": "Clean the viewing window with a mild detergent and lenses or a cotton cloth. Do not use paper towels as they can scratch the acrylic."
+        },
+        {
+            "input": "How often should the third mirror and focusing lens be inspected and cleaned?",
+            "expected_output": "They must be inspected daily and cleaned if needed."
+        },
+        {
+            "input": "How often should other mirrors and exhaust systems be inspected and cleaned?",
+            "expected_output": "They must be inspected weekly and cleaned if needed."
+        },
+        {
+            "input": "How often should beam alignment be checked?",
+            "expected_output": "Beam alignment should be checked weekly."
+        },
+        {
+            "input": "How often should wiring be checked for loose connections?",
+            "expected_output": "The wiring should be checked weekly for loose connections, especially for the laser tube power supply."
+        },
+        {
+            "input": "How often should air assistance be inspected and cleaned?",
+            "expected_output": "Air assistance must be inspected once a month and cleaned if needed."
+        },
+        {
+            "input": "How often should the entire laser machine and water cooling system be inspected and cleaned?",
+            "expected_output": "The entire laser machine, including other components such as the water cooling system, must be inspected once a month and cleaned if needed."
+        },
+        {
+            "input": "What are the common issues if the panel indicates machine protection or water ingress protection defects?",
+            "expected_output": "Common issues include the door not being closed, a damaged cover protection switch, clogged water pipes, a broken pump, or impaired water resistance."
+        },
+        {
+            "input": "What are the solutions for the panel indicating machine protection or water ingress protection defects?",
+            "expected_output": "Solutions include closing the door, replacing a damaged switch, cleaning water pipes, or replacing a broken pump."
+        },
+        {
+            "input": "What causes the panel to prompt a 'working hyper interface'?",
+            "expected_output": "This is caused by the cutting paper size being too large or the machine anchor point being incorrect."
+        },
+        {
+            "input": "What are the solutions for the panel prompting a 'working hyper interface'?",
+            "expected_output": "Solutions include resizing the image or retargeting the anchor point."
+        },
+        {
+            "input": "What causes laser cutting to be impermeable?",
+            "expected_output": "This is caused by an incorrect light path of the laser, dirty mirrors and lenses, or problems with the laser tubes."
+        },
+        {
+            "input": "What are the solutions for laser cutting being impermeable?",
+            "expected_output": "Solutions include adjusting the optical path, washing mirrors and lenses with alcohol, or replacing the laser tube."
+        },
+        {
+            "input": "What causes the laser not to emit light?",
+            "expected_output": "This can be due to an incorrectly connected power control terminal, a broken control connection line, chiller water protection failure, insufficient chiller coolant, laser power failures, or control board failure."
+        },
+        {
+            "input": "What are the solutions for the laser not emitting light?",
+            "expected_output": "Solutions include checking terminal connections, replacing the water protector, adding coolant, replacing the power supply/cord, or contacting customer service for laser/control board failure."
+        },
+        {
+            "input": "What causes discharge ignition?",
+            "expected_output": "This is caused by a damaged or broken connection line between the laser and its power supply, or laser failure."
+        },
+        {
+            "input": "What are the solutions for discharge ignition?",
+            "expected_output": "Solutions include replacing the cable or contacting customer service for laser failure."
+        },
+        {
+            "input": "What causes the Y-axis not to move?",
+            "expected_output": "This is caused by poor relay connection or the rotary switch not being turned off."
+        },
+        {
+            "input": "What are the solutions for the Y-axis not moving?",
+            "expected_output": "Solutions include repositioning the relay, replacing it with a new one, or turning off the rotary switch."
+        },
+        {
+            "input": "What causes the scan panel to indicate insufficient buffer distance?",
+            "expected_output": "This is caused by the X-axis laser head being too far away from one side."
+        },
+        {
+            "input": "What is the solution for the scan panel indicating insufficient buffer distance?",
+            "expected_output": "Reposition the X-axis laser head so that it is 50 mm away from the origin."
+        },
+        {
+            "input": "What causes the reset switch on the machine to not function?",
+            "expected_output": "This is caused by a damaged limit switch or a damaged limit line, and the switch in the e-chain is disconnected."
+        },
+        {
+            "input": "What is the solution for the reset switch on the machine not functioning?",
+            "expected_output": "Replace with a new red limit switch."
+        },
+        {
+            "input": "What is the purpose of the 'Origin set' option in the function menu?",
+            "expected_output": "It allows setting the anchor point for engraving."
+        },
+        {
+            "input": "What does 'Restore default' in the function menu do?",
+            "expected_output": "It replaces all current parameters with the saved default factory parameters."
+        },
+        {
+            "input": "How do you adjust the Z-axis using the control panel?",
+            "expected_output": "When 'Z Move' is selected, press the up or down arrow keys to control the movement of the Z-axis."
+        },
+        {
+            "input": "How do you adjust the U-axis using the control panel?",
+            "expected_output": "When 'U Move' is selected, press the up or down arrow keys to control the movement of the U-axis."
+        },
+        {
+            "input": "How do you reset the XY axis?",
+            "expected_output": "Select 'Shaft Reset+', press ENT, then select 'XY axis reset' and press ENT again."
+        },
+        {
+            "input": "How do you adjust laser settings like 'Laser mode' and 'Laser time'?",
+            "expected_output": "After selecting 'Laser settings' and pressing ENT, use arrow keys to select parameters and ENT to confirm changes. Select 'Write' to save."
+        },
+        {
+            "input": "What is the 'Manual' movement mode in laser settings?",
+            "expected_output": "In 'Manual' mode, each press of the arrow keys moves the laser head precisely the distance saved in the parameter."
+        },
+        {
+            "input": "What is the 'Continuous' movement mode in laser settings?",
+            "expected_output": "In 'Continuous' mode, the arrow keys move the laser head continuously until released."
+        },
+        {
+            "input": "How do you enable or disable 'Muti-Origin enable'?",
+            "expected_output": "Press FN to select 'Muti-Origin enable', then press ENT to enable or disable it. Red indicates enabled, gray indicates disabled."
+        },
+        {
+            "input": "What is the default IP address for the engraver?",
+            "expected_output": "The default IP address for the engraver is 192.168.1.100."
+        },
+        {
+            "input": "What information is displayed in the 'INPUT' section of the diagnostic tools?",
+            "expected_output": "It displays hardware I/O port information. When a hardware signal is triggered, the small box next to the entry will be red, otherwise gray."
+        },
+        {
+            "input": "How do you toggle the output state in the diagnostic tools?",
+            "expected_output": "Use the cursor to select the output, then press ENT to toggle its state."
+        },
+        {
+            "input": "What does the 'Screen origin' setting do?",
+            "expected_output": "This interface displays the location of the origin. Different origin positions can produce different reflections of the graph on the X/Y axis."
+        },
+        {
+            "input": "How do you adjust the 'Sculpt Layer' parameters?",
+            "expected_output": "When the system is idle or work is complete, press ENT to enter the layer parameters section. Use arrow keys to select a layer, then ENT to check parameters. Move cursor to 'Write' and press ENT to save."
+        },
+        {
+            "input": "What is 'Fast feed spd' in movement parameters?",
+            "expected_output": "Fast feed spd (speed) is a parameter for rapid movement, measured in mm/s."
+        },
+        {
+            "input": "What is 'Cutting Acc' in movement parameters?",
+            "expected_output": "Cutting Acc (acceleration) is a parameter for cutting acceleration, measured in mm/s²."
+        },
+        {
+            "input": "What is 'Fast feed Acc' in movement parameters?",
+            "expected_output": "Fast feed Acc (acceleration) is a parameter for fast feed acceleration, measured in mm/s²."
+        },
+        {
+            "input": "What is 'Corner Acc' in movement parameters?",
+            "expected_output": "Corner Acc (acceleration) is a parameter for corner acceleration, measured in mm/s²."
+        },
+        {
+            "input": "What is 'Engrave Acc' in movement parameters?",
+            "expected_output": "Engrave Acc (acceleration) is a parameter for engraving acceleration, measured in mm/s²."
+        },
+        {
+            "input": "What is 'Start speed' in movement parameters?",
+            "expected_output": "Start speed is the initial speed for movement, measured in mm/s."
+        },
+        {
+            "input": "What is 'Cut jerk' in movement parameters?",
+            "expected_output": "Cut jerk is a parameter related to the rate of change of acceleration during cutting, expressed as a percentage (0-200%)."
+        },
+        {
+            "input": "What is 'Go frame speed' in frame parameters?",
+            "expected_output": "Go frame speed is the speed at which the machine moves to frame the design, measured in mm/s."
+        },
+        {
+            "input": "What is 'Cut frame speed' in frame parameters?",
+            "expected_output": "Cut frame speed is the speed at which the machine cuts the frame, measured in mm/s."
+        },
+        {
+            "input": "What is 'Frame gap' in frame parameters?",
+            "expected_output": "Frame gap is the distance of the frame, measured in mm."
+        },
+        {
+            "input": "What are the options for 'Auxi.air mode' in blowing parameters?",
+            "expected_output": "The options for 'Auxi.air mode' include 'Blow When laser'."
+        },
+        {
+            "input": "What is 'Open auxi.air delay' in blowing parameters?",
+            "expected_output": "It's the delay before the auxiliary air opens, measured in milliseconds (ms)."
+        },
+        {
+            "input": "What is 'Close auxi.air delay' in blowing parameters?",
+            "expected_output": "It's the delay before the auxiliary air closes, measured in milliseconds (ms)."
+        },
+        {
+            "input": "What is 'XY Reset speed' in reset speed parameters?",
+            "expected_output": "It's the speed for resetting the X and Y axes, measured in mm/s."
+        },
+        {
+            "input": "What is 'U Reset speed' in reset speed parameters?",
+            "expected_output": "It's the speed for resetting the U axis, measured in mm/s."
+        },
+        {
+            "input": "What is 'U work speed' in reset speed parameters?",
+            "expected_output": "It's the working speed for the U axis, measured in mm/s."
+        },
+        {
+            "input": "What is 'Manual fast' in reset speed parameters?",
+            "expected_output": "It's the fast manual movement speed, measured in mm/s."
+        },
+        {
+            "input": "What is 'Manual slow' in reset speed parameters?",
+            "expected_output": "It's the slow manual movement speed, measured in mm/s."
+        },
+        {
+            "input": "What is 'Reset to origin' in machine configuration?",
+            "expected_output": "It's a setting that determines if the machine resets to the origin, typically 'YES' or 'NO'."
+        },
+        {
+            "input": "What is 'Return position' in machine configuration?",
+            "expected_output": "It's a setting for where the machine returns, such as 'Origin pos'."
+        },
+        {
+            "input": "What is 'Origin on overscale' in machine configuration?",
+            "expected_output": "It's a setting related to the origin when exceeding scale, typically 'YES' or 'NO'."
+        },
+        {
+            "input": "What is 'U Focus distance' in machine configuration?",
+            "expected_output": "It's the focus distance for the U axis, measured in mm."
+        },
+        {
+            "input": "What is 'Enable rotary Func' in rotation function settings?",
+            "expected_output": "It enables or disables the rotary function, typically 'YES' or 'NO'."
+        },
+        {
+            "input": "What is 'PPR' in rotation function settings?",
+            "expected_output": "PPR stands for Pulses Per Revolution, a parameter in rotation settings."
+        },
+        {
+            "input": "What is 'Diameter' in rotation function settings?",
+            "expected_output": "It's the diameter setting for the rotary function, measured in mm."
+        },
+        {
+            "input": "How do you backup parameters to a USB disk?",
+            "expected_output": "In the main menu, select 'Controller Settings', then 'Backup to U disk'."
+        },
+        {
+            "input": "How do you restore parameters from a USB flash drive?",
+            "expected_output": "In the main menu, select 'Controller Settings', then 'Restore para from U disk'."
+        },
+        {
+            "input": "How do you upgrade the controller software from a USB flash drive?",
+            "expected_output": "In the main menu, select 'Controller Settings', then 'Upgrade from U disk'."
+        },
+        {
+            "input": "How do you set the date and time of the machine?",
+            "expected_output": "In the 'Controller Settings' submenu, select 'Time Settings+'. Use arrow keys to adjust parameters and ENT to save."
+        },
+        {
+            "input": "What is the recommended focal length for a focusing lens with a 60W-100W laser tube?",
+            "expected_output": "It is recommended to use a focusing lens with a focal length of 50.8."
+        },
+        {
+            "input": "What is the recommended power range for cutting with a 60W-100W laser tube and a small air compressor?",
+            "expected_output": "It is recommended to cut at 50%-70% power."
+        },
+        {
+            "input": "What is the fastest speed for cutting 3mm acrylic with a 50W laser?",
+            "expected_output": "The fastest speed is 15mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 3mm acrylic with a 50W laser?",
+            "expected_output": "The optimal speed is 10mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 5mm acrylic with a 60W laser?",
+            "expected_output": "The fastest speed is 10mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 5mm acrylic with a 60W laser?",
+            "expected_output": "The optimal speed is 7mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 8mm acrylic with an 80W laser?",
+            "expected_output": "The fastest speed is 9mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 8mm acrylic with an 80W laser?",
+            "expected_output": "The optimal speed is 5mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 10mm acrylic with a 100W laser?",
+            "expected_output": "The fastest speed is 10mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 10mm acrylic with a 100W laser?",
+            "expected_output": "The optimal speed is 6mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 15mm acrylic with a 130W laser?",
+            "expected_output": "The fastest speed is 7mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 15mm acrylic with a 130W laser?",
+            "expected_output": "The optimal speed is 4mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 2mm PVC with a 50W laser?",
+            "expected_output": "The fastest speed is 35mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 2mm PVC with a 50W laser?",
+            "expected_output": "The optimal speed is 32mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 3mm PVC with a 60W laser?",
+            "expected_output": "The fastest speed is 40mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 3mm PVC with a 60W laser?",
+            "expected_output": "The optimal speed is 38mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 4mm PVC with an 80W laser?",
+            "expected_output": "The fastest speed is 45mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 4mm PVC with an 80W laser?",
+            "expected_output": "The optimal speed is 40mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting cloth with a 50W laser?",
+            "expected_output": "The fastest speed is 40mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting cloth with a 50W laser?",
+            "expected_output": "The optimal speed is 38mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting leather with a 50W laser?",
+            "expected_output": "The fastest speed is 15mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting leather with a 50W laser?",
+            "expected_output": "The optimal speed is 12mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting paper with a 50W laser?",
+            "expected_output": "The fastest speed is 80mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting paper with a 50W laser?",
+            "expected_output": "The optimal speed is 40mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 2mm Black-color plate with a 50W laser?",
+            "expected_output": "The fastest speed is 15mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 2mm Black-color plate with a 50W laser?",
+            "expected_output": "The optimal speed is 13mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 3mm wood with a 50W laser?",
+            "expected_output": "The fastest speed is 9mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 3mm wood with a 50W laser?",
+            "expected_output": "The optimal speed is 7mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 5mm wood with a 60W laser?",
+            "expected_output": "The fastest speed is 10mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 5mm wood with a 60W laser?",
+            "expected_output": "The optimal speed is 8mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 10mm wood with an 80W laser?",
+            "expected_output": "The fastest speed is 9mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 10mm wood with an 80W laser?",
+            "expected_output": "The optimal speed is 6mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 15mm wood with a 100W laser?",
+            "expected_output": "The fastest speed is 12mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 15mm wood with a 100W laser?",
+            "expected_output": "The optimal speed is 9mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 20mm wood with a 130W laser?",
+            "expected_output": "The fastest speed is 15mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 20mm wood with a 130W laser?",
+            "expected_output": "The optimal speed is 10mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 25mm wood with a 150W laser?",
+            "expected_output": "The fastest speed is 18mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 25mm wood with a 150W laser?",
+            "expected_output": "The optimal speed is 12mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 30mm wood with a 150W laser?",
+            "expected_output": "The fastest speed is 21mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 30mm wood with a 150W laser?",
+            "expected_output": "The optimal speed is 15mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 40mm wood with a 150W laser?",
+            "expected_output": "The fastest speed is 25mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 40mm wood with a 150W laser?",
+            "expected_output": "The optimal speed is 18mm/s."
+        },
+        {
+            "input": "What is the fastest speed for cutting 50mm wood with a 150W laser?",
+            "expected_output": "The fastest speed is 30mm/s."
+        },
+        {
+            "input": "What is the optimal speed for cutting 50mm wood with a 150W laser?",
+            "expected_output": "The optimal speed is 22mm/s."
+        },
+        {
+        "input": "Explain the fundamental working principle of a CNC machine.",
+        "expected_output": "A CNC machine operates based on numerical control, where pre-programmed software dictates the movement of tools and machinery. This allows for precise and automated manufacturing processes."
+        },
+        {
+        "input": "Describe the basic structure of a CNC machine.",
+        "expected_output": "The basic structure includes a machine base, worktable, spindle, cutting tool, and a control unit. The control unit interprets the program and controls the movement of the machine components."
+        },
+        {
+        "input": "What are the key procedures involved in operating a CNC machine?",
+        "expected_output": "Key procedures include CAD/CAM design, program creation (G-code), machine setup (tooling, workpiece), program execution, and quality control."
+        },
+        {
+        "input": "List the basic steps to guide someone in using a CNC machine.",
+        "expected_output": "1. Understand CNC machine components. 2. Learn CAD/CAM software. 3. Generate G-code. 4. Set up the machine. 5. Run the program and monitor. 6. Inspect the finished part."
+        },
+        {
+        "input": "Define the term 'G-code' in the context of CNC machines.",
+        "expected_output": "G-code is a programming language used to control CNC machines. It contains instructions for machine movements, speeds, and other parameters."
+        },
+        {
+        "input": "Explain the function of the spindle in a CNC milling machine.",
+        "expected_output": "The spindle holds and rotates the cutting tool in a CNC milling machine. Its speed and accuracy are critical for achieving the desired surface finish and dimensional accuracy."
+        },
+        {
+        "input": "Describe the purpose of the worktable in a CNC machine.",
+        "expected_output": "The worktable is a platform where the workpiece is securely mounted. It can move along multiple axes to position the workpiece relative to the cutting tool."
+        },
+        {
+        "input": "What is the role of the control unit in a CNC machine?",
+        "expected_output": "The control unit, also known as the CNC controller, is the brain of the machine. It reads and interprets the G-code program and sends signals to the machine's motors and other components to execute the programmed instructions."
+        },
+        {
+        "input": "Explain the difference between open-loop and closed-loop CNC systems.",
+        "expected_output": "In an open-loop system, the controller sends a signal to the motor, but there is no feedback to confirm that the desired movement has been achieved. In a closed-loop system, feedback devices (e.g., encoders) monitor the actual position and speed, allowing the controller to make corrections and ensure accuracy."
+        },
+        {
+        "input": "What are some common types of CNC machines?",
+        "expected_output": "Common types include CNC milling machines, CNC lathes, CNC routers, CNC grinders, and CNC EDM machines. Each type is designed for specific machining operations."
+        },
+        {
+        "input": "What is the primary function of the VEVOR Laser Engraving Machine?",
+        "expected_output": "The VEVOR Laser Engraving Machine is designed for engraving logos and other consumer products on applicable substrates using a powerful laser beam."
+        },
+        {
+        "input": "What type of laser does the VEVOR engraver use?",
+        "expected_output": "The VEVOR engraver uses a CO2 glass laser, specifically a glass tube filled with insulating carbon dioxide (CO2)."
+        },
+        {
+        "input": "How does the laser beam reach the material in the VEVOR engraver?",
+        "expected_output": "The laser beam is emitted from a CO2 glass tube, reflects off three mirrors, and then passes through a focusing lens to etch the design onto the material."
+        },
+        {
+        "input": "What are the three mirrors used for in the VEVOR laser engraver?",
+        "expected_output": "The first mirror is fixed near the laser tube, the second mirror travels along the Y-axis, and the third mirror is attached to the laser head traveling along the X-axis."
+        },
+        {
+        "input": "Why do the mirrors in the laser engraver need frequent cleaning and periodic readjustment?",
+        "expected_output": "Dust from the engraving process settles on the mirrors, requiring frequent cleaning. Since they move during operation, they also need periodic readjustment to maintain the correct laser path."
+        },
+        {
+        "input": "What systems are necessary for the safe operation of the VEVOR laser engraver?",
+        "expected_output": "A water-cooled system (pump or cooler) and an exhaust system (external vent or air purifier) are absolutely necessary for safe operation."
+        },
+        {
+        "input": "What is the recommended power setting range for optimal performance and longevity of the laser tube?",
+        "expected_output": "It is recommended to set the laser at 10-70% of its maximum rated power for optimal performance and longevity. Running consistently above 70% will significantly shorten its lifespan."
+        },
+        {
+        "input": "Why is it recommended to only touch components with one hand at a time on the VEVOR engraver?",
+        "expected_output": "This is a high-voltage device, and for safety reasons, it is recommended to only touch its components with one hand at a time during use."
+        },
+        {
+        "input": "Is the active laser beam visible to the human eye?",
+        "expected_output": "No, active lasers are invisible to the human eye."
+        },
+        {
+        "input": "What is the purpose of the viewing window on the VEVOR engraver?",
+        "expected_output": "The viewing window is a tan acrylic window that allows monitoring of the engraving process, but it only partially absorbs the high infrared laser and offers no other protection. Protective glasses should always be worn."
+        },
+        {
+        "input": "What is the function of the LED light on the VEVOR engraver?",
+        "expected_output": "The LED light illuminates the workbench for a clear view of the material engraving before, during, and after work."
+        },
+        {
+        "input": "What do the Y-axis guides do on the VEVOR engraver?",
+        "expected_output": "Y-axis guides allow X-axis guides to move back and forth on the table."
+        },
+        {
+        "input": "What is the purpose of the water cooling switch?",
+        "expected_output": "After the water cooling switch is activated, the built-in water cooling starts, and the real-time temperature display lights up."
+        },
+        {
+        "input": "What does the X-Axis Rail do?",
+        "expected_output": "The X-Axis Rail holds the second mirror and supports the laser head to move left and right."
+        },
+        {
+        "input": "How do you fill the built-in circulating water tank?",
+        "expected_output": "The water inlet is used to unscrew the lid counterclockwise when filling the built-in circulating water tank."
+        },
+        {
+        "input": "What do the colors on the water level display indicate?",
+        "expected_output": "Yellow indicates the water level is too high, green indicates it is suitable, and red indicates it is too low."
+        },
+        {
+        "input": "What is the purpose of the Front Straight Door?",
+        "expected_output": "This door opens to allow larger materials to pass through the work bed. Extreme care must be taken to avoid laser exposure."
+        },
+        {
+        "input": "What is the Front Access Door used for?",
+        "expected_output": "This door provides access to the area below the bench for easy cleaning."
+        },
+        {
+        "input": "What happens when the engraver's canopy (lid) is opened during operation?",
+        "expected_output": "When the lid is opened, the power of the laser is automatically cut off."
+        },
+        {
+        "input": "What do the red and green lights on the working indicator mean?",
+        "expected_output": "Red light indicates the laser is working, and green light indicates the laser is idle."
+        },
+        {
+        "input": "What is the main function of the control panel?",
+        "expected_output": "The control panel provides manual control of the engraving process, including movement of the laser head and laser emission."
+        },
+        {
+        "input": "What is the purpose of the main switch?",
+        "expected_output": "The main switch controls the total power of the entire machine."
+        },
+        {
+        "input": "How do the Z-Axis Control Switches function?",
+        "expected_output": "These buttons move the table up or down to adapt and focus on various thicknesses of material."
+        },
+        {
+        "input": "What are the connection ports used for?",
+        "expected_output": "These ports connect the main board of the engraving machine to the control computer and its engraving software via a USB or Ethernet cable."
+        },
+        {
+        "input": "What is the Right Access Door for?",
+        "expected_output": "This door provides access to the motherboard, motor drivers, and power supply. Its vents should not be obstructed."
+        },
+        {
+        "input": "What is the function of the Motherboard cooling fan?",
+        "expected_output": "This fan is used for heat dissipation of core appliances such as built-in motherboards and laser power supplies."
+        },
+        {
+        "input": "What is the purpose of the Emergency Stop Switch?",
+        "expected_output": "In case of emergency, this button immediately cuts off all power to the laser tube."
+        },
+        {
+        "input": "What does the Laser Head contain?",
+        "expected_output": "The laser head holds the 3rd mirror, focusing lens, red dot guidance, and air assist outlet."
+        },
+        {
+        "input": "How can the table height be adjusted?",
+        "expected_output": "Table height can be adjusted to accommodate thinner and thicker materials, as well as between aluminum and cellular platforms."
+        },
+        {
+        "input": "When must the Laser Control Switch be turned on?",
+        "expected_output": "This switch must be turned on when using a laser."
+        },
+        {
+        "input": "What is the Light switch for?",
+        "expected_output": "The light switch turns on the light on the workbench."
+        },
+        {
+        "input": "What is the Rotary axis switch used for?",
+        "expected_output": "This switch must be turned on when using the rotary axis (off when not in use). If the Y-axis is not moving, check if this switch is off."
+        },
+        {
+        "input": "What is the Power Input connection?",
+        "expected_output": "This power connector must be connected before using the machine."
+        },
+        {
+        "input": "What is behind the Top Rear Access Door?",
+        "expected_output": "This door leads to the laser bay where the laser tube and its connections are secured."
+        },
+        {
+        "input": "What is the Rear Door equivalent to?",
+        "expected_output": "This door is the equivalent of a front door and requires similar care during use."
+        },
+        {
+        "input": "What does the Lower Rear Access Door provide access to?",
+        "expected_output": "This door provides access to the air assist pump and Z-axis belt."
+        },
+        {
+        "input": "What is the function of the Exhaust fan?",
+        "expected_output": "This fan extracts gas and debris from the air from the workbench and sends the air out after being purified by an eco-friendly filter."
+        },
+        {
+        "input": "What is the Water Tank Cooling Fan used for?",
+        "expected_output": "This fan is used to cool the circulating water."
+        },
+        {
+        "input": "Describe the Laser tube (component A in the diagram).",
+        "expected_output": "This glass tube filled with carbon dioxide is mounted on a bracket and cannot be moved. The connection voltage between it and the laser power supply is extremely high and extremely dangerous."
+        },
+        {
+        "input": "Describe the First reflector (component B in the diagram).",
+        "expected_output": "This adjustable angle mirror is held in place to transfer the engraving laser from the tube to the second mirror."
+        },
+        {
+        "input": "Describe the Second mirror (component C in the diagram).",
+        "expected_output": "This adjustable angle mirror moves along the X-axis guide to allow the laser beam to travel along the Y-axis."
+        },
+        {
+        "input": "Describe the Third mirror (component D in the diagram).",
+        "expected_output": "This angle-adjustable mirror moves with the laser head, allowing the laser beam to travel along the X-axis."
+        },
+        {
+        "input": "Describe the Focusing Lens (component E in the diagram).",
+        "expected_output": "This lens directs and focuses the laser light onto the material."
+        },
+        {
+        "input": "Describe the Workbench (component F in the diagram).",
+        "expected_output": "The height of the exposed workbench can be adjusted."
+        },
+        {
+        "input": "What is the USB Line Port (component A in the diagram) used for?",
+        "expected_output": "This port uses any of its USB ports to connect to the control computer and its engraving software."
+        },
+        {
+        "input": "What is the USB Port (component B in the diagram) used for?",
+        "expected_output": "This port allows you to load and save designs and parameters directly to the engraver."
+        },
+        {
+        "input": "What is the Ethernet port (component C in the diagram) used for?",
+        "expected_output": "This port connects directly or via the Internet to the control computer and its software."
+        },
+        {
+        "input": "What is the Laser Head Third Mirror (component A in the diagram) for?",
+        "expected_output": "This angle-adjustable mirror transmits laser light from the second mirror to the focusing lens."
+        },
+        {
+        "input": "What is the X-axis guide (component B in the diagram) for?",
+        "expected_output": "This guide moves along the Y-axis, and its movement is controlled by a limit switch."
+        },
+        {
+        "input": "What is Air Assist (component C in the diagram) for?",
+        "expected_output": "This device blows pressurized air to kill sparks and blow away gases and debris while engraving."
+        },
+        {
+        "input": "What is the Red Dot Pointer (component E in the diagram) for?",
+        "expected_output": "This device helps you see the exact location of the invisible engraving laser."
+        },
+        {
+        "input": "What is the Laser (component F in the diagram) itself?",
+        "expected_output": "The engraving laser itself is invisible, but very dangerous. Direct contact with skin or eyes should be avoided."
+        },
+        {
+        "input": "What is the Motherboard (component A in the diagram) in the right access door?",
+        "expected_output": "This board controls the engraving process and responds to commands from the engraving software or the machine's control panel."
+        },
+        {
+        "input": "What is the X-axis driver (component B in the diagram) for?",
+        "expected_output": "This device moves the laser head along the X-rail."
+        },
+        {
+        "input": "What is the Y-axis drive (component C in the diagram) for?",
+        "expected_output": "This device moves the X-rail along the Y-rail."
+        },
+        {
+        "input": "What is Laser Power (component D in the diagram) for?",
+        "expected_output": "This device converts standard electricity into the extremely high voltage charge required for a laser tube."
+        },
+        {
+        "input": "What is the Power Supply (component E in the diagram) for?",
+        "expected_output": "This device powers the machine's motherboard and drives."
+        },
+        {
+        "input": "What is the High-voltage wire (component A in the diagram) of the laser power supply?",
+        "expected_output": "This wire is connected to the anode or positive end of the laser tube and provides high-voltage current to power the laser."
+        },
+        {
+        "input": "What are the Mounting Holes (component B in the diagram) on the laser power supply for?",
+        "expected_output": "These standard slots allow for simple installation and removal."
+        },
+        {
+        "input": "What is the Reset button on the control panel for?",
+        "expected_output": "The Reset button performs a system reset."
+        },
+        {
+        "input": "What does the Stop button on the control panel do?",
+        "expected_output": "The Stop button stops machining or motor shaft movement."
+        },
+        {
+        "input": "What is the Delete key on the control panel for?",
+        "expected_output": "This parameter is used to delete the parameter."
+        },
+        {
+        "input": "What is the Origin (Anchor key) on the control panel for?",
+        "expected_output": "The Origin (Anchor key) is used to set the anchor point."
+        },
+        {
+        "input": "What is the Pulse (Point Shot Button) on the control panel for?",
+        "expected_output": "The Pulse (Point Shot Button) makes the laser tube point to the light."
+        },
+        {
+        "input": "What is the Enter (OK key) on the control panel for?",
+        "expected_output": "The Enter (OK key) is used for user confirmation."
+        },
+        {
+        "input": "What is the Focus (Autofocus key) on the control panel for?",
+        "expected_output": "The Focus (Autofocus key) automatically finds the focus point."
+        },
+        {
+        "input": "What does the Speed key on the control panel do?",
+        "expected_output": "The Speed key sets the current machining speed value."
+        },
+        {
+        "input": "What do the Z-axis keys (Z↑ Z↓) on the control panel do?",
+        "expected_output": "These keys are used to move the Z-axis."
+        },
+        {
+        "input": "What do the U-axis keys (U+ U-) on the control panel do?",
+        "expected_output": "These keys are used to move the U-axis."
+        },
+        {
+        "input": "What is the St/Pau (Start/Pause key) on the control panel for?",
+        "expected_output": "The St/Pau (Start/Pause key) starts work or pauses/restarts work."
+        },
+        {
+        "input": "What is the Decimal Point key on the control panel used for?",
+        "expected_output": "The Decimal Point key is used to set parameters with decimals."
+        },
+        {
+        "input": "What is the Power button on the control panel used for?",
+        "expected_output": "The Power button sets the current maximum and minimum power values."
+        },
+        {
+        "input": "What is the Jog/Continuous Key on the control panel for?",
+        "expected_output": "The Jog/Continuous Key switches between jog motion and continuous motion."
+        },
+        {
+        "input": "What do the Shift (Toggle keys) on the control panel do?",
+        "expected_output": "The Shift (Toggle keys) combine with number keys to form key combinations or toggle special functions."
+        },
+        {
+        "input": "What does the Esc (Exit key) on the control panel do?",
+        "expected_output": "The Esc (Exit key) returns to the previous menu, canceling parameter settings."
+        },
+        {
+        "input": "What are the Menu keys on the control panel for?",
+        "expected_output": "The Menu keys access user parameters, manufacturer parameters, language settings, etc."
+        },
+        {
+        "input": "What is the Frame (Border Key) on the control panel for?",
+        "expected_output": "The Frame (Border Key) performs a boundary traversal operation on the file being processed."
+        },
+        {
+        "input": "What are the File Keys on the control panel for?",
+        "expected_output": "The File Keys manage memory files and USB flash drive files."
+        },
+        {
+        "input": "What does the Graphical display area on the control panel show?",
+        "expected_output": "It displays the track and running track of the entire file."
+        },
+        {
+        "input": "What does the Version Number area on the control panel display?",
+        "expected_output": "It displays the version number of the panel and motherboard."
+        },
+        {
+        "input": "What does the System Time area on the control panel display?",
+        "expected_output": "It displays the current system time."
+        },
+        {
+        "input": "What does the Parameter display area on the control panel show?",
+        "expected_output": "It displays the file number, speed, maximum power, etc., of the running file."
+        },
+        {
+        "input": "What does the Coordinate Display Area on the control panel show?",
+        "expected_output": "It displays the current coordinates of the laser head."
+        },
+        {
+        "input": "What does the Layer Display Area on the control panel show?",
+        "expected_output": "It displays the layer parameters of the current or preview file, including layer number, color, speed, and maximum power."
+        },
+        {
+        "input": "What does the Frame Size Processed area on the control panel display?",
+        "expected_output": "It displays the dimensions of the current file."
+        },
+        {
+        "input": "What does the Number of Pieces area on the control panel display?",
+        "expected_output": "It displays the count of completed runs for the current file."
+        },
+        {
+        "input": "What does the System Status area on the control panel display?",
+        "expected_output": "It displays the current status of the machine: idle, running, paused, or completed, along with the processing time."
+        },
+        {
+        "input": "What does the Processing Progress Bar on the control panel display?",
+        "expected_output": "It displays the progress of the current file."
+        },
+        {
+        "input": "What is the recommended operating temperature for the VEVOR laser engraver?",
+        "expected_output": "The recommended operating temperature is between 10°C and 38°C (50°F and 100.4°F)."
+        },
+        {
+        "input": "What is the recommended storage temperature for the VEVOR laser engraver?",
+        "expected_output": "The recommended storage temperature is between -10°C and 35°C (14°F and 95°F)."
+        },
+        {
+        "input": "What is the recommended storage humidity for the VEVOR laser engraver?",
+        "expected_output": "The recommended storage humidity is between 20%RH and 80%RH."
+        },
+        {
+        "input": "How often should the rails of the engraving machine be cleaned and lubricated?",
+        "expected_output": "For best results, clean and lubricate the rails of the engraving machine every two weeks."
+        },
+        {
+        "input": "What materials are safe to use with the VEVOR laser engraving machine?",
+        "expected_output": "Safe materials include plastics (ABS, Nylon, Polyethylene, BoPET, PETG, Polyimide, PMMA, POM, Polypropylene, Styrene), cardboard, ceramics, glass, leather, paper, rubber, stone, textiles, and timber."
+        },
+        {
+        "input": "What materials should NOT be used with the VEVOR laser engraving machine?",
+        "expected_output": "Materials containing hexavalent chromium, Astatine, Beryllium oxide, Bromine, Chlorine (including PVC), Fluorine (including Teflon), Iodine, Metals, and Phenolic resins should not be used due to toxic fumes or other hazards."
+        },
+        {
+        "input": "What is the recommended resolution for engraving?",
+        "expected_output": "The resolution should generally be set to 500 dots per inch."
+        },
+        {
+        "input": "What is the minimum power threshold for laser emission?",
+        "expected_output": "The minimum threshold is 10%. The laser will not be emitted at any setting lower than this."
+        },
+        {
+        "input": "What is the maximum recommended power for prolonged laser use?",
+        "expected_output": "The recommended maximum power is set at 70%, as prolonged use of more than this amount will shorten the lifetime of the laser."
+        },
+        {
+        "input": "How can engraving depth be increased?",
+        "expected_output": "To increase the engraving depth, increase the energy per unit area by increasing the laser's power or number of rings, or by slowing down the speed parameter."
+        },
+        {
+        "input": "What type of water is recommended for the water cooling system?",
+        "expected_output": "Clean distilled water or purified water is recommended. Tap water or sewage should not be used as it reduces service life."
+        },
+        {
+        "input": "What is the maximum recommended water temperature for the cooling system?",
+        "expected_output": "The water temperature should not exceed 100°F (38°C). If this temperature is reached, stop working until it cools down."
+        },
+        {
+        "input": "What should be done if the water temperature is about to drop below 0 degrees Celsius?",
+        "expected_output": "Replace the water with an antifreeze liquid to avoid damage to the carbon dioxide glass laser tube."
+        },
+        {
+        "input": "What is the purpose of the air assist feature?",
+        "expected_output": "Air Assist blows pressurized air to kill sparks and blow away gases and debris while engraving."
+        },
+        {
+        "input": "How often should the main engraving compartment be cleaned?",
+        "expected_output": "It should be checked at least once a day for dust accumulation, and removed if present. Cleaning intervals depend on material and operating time."
+        },
+        {
+        "input": "How should the viewing window be cleaned?",
+        "expected_output": "Clean the viewing window with a mild detergent and lenses or a cotton cloth. Do not use paper towels as they can scratch the acrylic."
+        },
+        {
+        "input": "How often should the third mirror and focusing lens be inspected and cleaned?",
+        "expected_output": "They must be inspected daily and cleaned if needed."
+        },
+        {
+        "input": "How often should other mirrors and exhaust systems be inspected and cleaned?",
+        "expected_output": "They must be inspected weekly and cleaned if needed."
+        },
+        {
+        "input": "How often should beam alignment be checked?",
+        "expected_output": "Beam alignment should be checked weekly."
+        },
+        {
+        "input": "How often should wiring be checked for loose connections?",
+        "expected_output": "The wiring should be checked weekly for loose connections, especially for the laser tube power supply."
+        },
+        {
+        "input": "How often should air assistance be inspected and cleaned?",
+        "expected_output": "Air assistance must be inspected once a month and cleaned if needed."
+        },
+        {
+        "input": "How often should the entire laser machine and water cooling system be inspected and cleaned?",
+        "expected_output": "The entire laser machine, including other components such as the water cooling system, must be inspected once a month and cleaned if needed."
+        },
+        {
+        "input": "What are the common issues if the panel indicates machine protection or water ingress protection defects?",
+        "expected_output": "Common issues include the door not being closed, a damaged cover protection switch, clogged water pipes, a broken pump, or impaired water resistance."
+        },
+        {
+        "input": "What are the solutions for the panel indicating machine protection or water ingress protection defects?",
+        "expected_output": "Solutions include closing the door, replacing a damaged switch, cleaning water pipes, or replacing a broken pump."
+        },
+        {
+        "input": "What causes the panel to prompt a 'working hyper interface'?",
+        "expected_output": "This is caused by the cutting paper size being too large or the machine anchor point being incorrect."
+        },
+        {
+        "input": "What are the solutions for the panel prompting a 'working hyper interface'?",
+        "expected_output": "Solutions include resizing the image or retargeting the anchor point."
+        },
+        {
+        "input": "What causes laser cutting to be impermeable?",
+        "expected_output": "This is caused by an incorrect light path of the laser, dirty mirrors and lenses, or problems with the laser tubes."
+        },
+        {
+        "input": "What are the solutions for laser cutting being impermeable?",
+        "expected_output": "Solutions include adjusting the optical path, washing mirrors and lenses with alcohol, or replacing the laser tube."
+        },
+        {
+        "input": "What causes the laser not to emit light?",
+        "expected_output": "This can be due to an incorrectly connected power control terminal, a broken control connection line, chiller water protection failure, insufficient chiller coolant, laser power failures, or control board failure."
+        },
+        {
+        "input": "What are the solutions for the laser not emitting light?",
+        "expected_output": "Solutions include checking terminal connections, replacing the water protector, adding coolant, replacing the power supply/cord, or contacting customer service for laser/control board failure."
+        },
+        {
+        "input": "What causes discharge ignition?",
+        "expected_output": "This is caused by a damaged or broken connection line between the laser and its power supply, or laser failure."
+        },
+        {
+        "input": "What are the solutions for discharge ignition?",
+        "expected_output": "Solutions include replacing the cable or contacting customer service for laser failure."
+        },
+        {
+        "input": "What causes the Y-axis not to move?",
+        "expected_output": "This is caused by poor relay connection or the rotary switch not being turned off."
+        },
+        {
+        "input": "What are the solutions for the Y-axis not moving?",
+        "expected_output": "Solutions include repositioning the relay, replacing it with a new one, or turning off the rotary switch."
+        },
+        {
+        "input": "What causes the scan panel to indicate insufficient buffer distance?",
+        "expected_output": "This is caused by the X-axis laser head being too far away from one side."
+        },
+        {
+        "input": "What is the solution for the scan panel indicating insufficient buffer distance?",
+        "expected_output": "Reposition the X-axis laser head so that it is 50 mm away from the origin."
+        },
+        {
+        "input": "What causes the reset switch on the machine to not function?",
+        "expected_output": "This is caused by a damaged limit switch or a damaged limit line, and the switch in the e-chain is disconnected."
+        },
+        {
+        "input": "What is the solution for the reset switch on the machine not functioning?",
+        "expected_output": "Replace with a new red limit switch."
+        },
+        {
+        "input": "What is the purpose of the 'Origin set' option in the function menu?",
+        "expected_output": "It allows setting the anchor point for engraving."
+        },
+        {
+        "input": "What does 'Restore default' in the function menu do?",
+        "expected_output": "It replaces all current parameters with the saved default factory parameters."
+        },
+        {
+        "input": "How do you adjust the Z-axis using the control panel?",
+        "expected_output": "When 'Z Move' is selected, press the up or down arrow keys to control the movement of the Z-axis."
+        },
+        {
+        "input": "How do you adjust the U-axis using the control panel?",
+        "expected_output": "When 'U Move' is selected, press the up or down arrow keys to control the movement of the U-axis."
+        },
+        {
+        "input": "How do you reset the XY axis?",
+        "expected_output": "Select 'Shaft Reset+', press ENT, then select 'XY axis reset' and press ENT again."
+        },
+        {
+        "input": "How do you adjust laser settings like 'Laser mode' and 'Laser time'?",
+        "expected_output": "After selecting 'Laser settings' and pressing ENT, use arrow keys to select parameters and ENT to confirm changes. Select 'Write' to save."
+        },
+        {
+        "input": "What is the 'Manual' movement mode in laser settings?",
+        "expected_output": "In 'Manual' mode, each press of the arrow keys moves the laser head precisely the distance saved in the parameter."
+        },
+        {
+        "input": "What is the 'Continuous' movement mode in laser settings?",
+        "expected_output": "In 'Continuous' mode, the arrow keys move the laser head continuously until released."
+        },
+        {
+        "input": "How do you enable or disable 'Muti-Origin enable'?",
+        "expected_output": "Press FN to select 'Muti-Origin enable', then press ENT to enable or disable it. Red indicates enabled, gray indicates disabled."
+        },
+        {
+        "input": "What is the default IP address for the engraver?",
+        "expected_output": "The default IP address for the engraver is 192.168.1.100."
+        },
+        {
+        "input": "What information is displayed in the 'INPUT' section of the diagnostic tools?",
+        "expected_output": "It displays hardware I/O port information. When a hardware signal is triggered, the small box next to the entry will be red, otherwise gray."
+        },
+        {
+        "input": "How do you toggle the output state in the diagnostic tools?",
+        "expected_output": "Use the cursor to select the output, then press ENT to toggle its state."
+        },
+        {
+        "input": "What does the 'Screen origin' setting do?",
+        "expected_output": "This interface displays the location of the origin. Different origin positions can produce different reflections of the graph on the X/Y axis."
+        },
+        {
+        "input": "How do you adjust the 'Sculpt Layer' parameters?",
+        "expected_output": "When the system is idle or work is complete, press ENT to enter the layer parameters section. Use arrow keys to select a layer, then ENT to check parameters. Move cursor to 'Write' and press ENT to save."
+        },
+        {
+        "input": "What is 'Fast feed spd' in movement parameters?",
+        "expected_output": "Fast feed spd (speed) is a parameter for rapid movement, measured in mm/s."
+        },
+        {
+        "input": "What is 'Cutting Acc' in movement parameters?",
+        "expected_output": "Cutting Acc (acceleration) is a parameter for cutting acceleration, measured in mm/s²."
+        },
+        {
+        "input": "What is 'Fast feed Acc' in movement parameters?",
+        "expected_output": "Fast feed Acc (acceleration) is a parameter for fast feed acceleration, measured in mm/s²."
+        },
+        {
+        "input": "What is 'Corner Acc' in movement parameters?",
+        "expected_output": "Corner Acc (acceleration) is a parameter for corner acceleration, measured in mm/s²."
+        },
+        {
+        "input": "What is 'Engrave Acc' in movement parameters?",
+        "expected_output": "Engrave Acc (acceleration) is a parameter for engraving acceleration, measured in mm/s²."
+        },
+        {
+        "input": "What is 'Start speed' in movement parameters?",
+        "expected_output": "Start speed is the initial speed for movement, measured in mm/s."
+        },
+        {
+        "input": "What is 'Cut jerk' in movement parameters?",
+        "expected_output": "Cut jerk is a parameter related to the rate of change of acceleration during cutting, expressed as a percentage (0-200%)."
+        },
+        {
+        "input": "What is 'Go frame speed' in frame parameters?",
+        "expected_output": "Go frame speed is the speed at which the machine moves to frame the design, measured in mm/s."
+        },
+        {
+        "input": "What is 'Cut frame speed' in frame parameters?",
+        "expected_output": "Cut frame speed is the speed at which the machine cuts the frame, measured in mm/s."
+        },
+        {
+        "input": "What is 'Frame gap' in frame parameters?",
+        "expected_output": "Frame gap is the distance of the frame, measured in mm."
+        },
+        {
+        "input": "What are the options for 'Auxi.air mode' in blowing parameters?",
+        "expected_output": "The options for 'Auxi.air mode' include 'Blow When laser'."
+        },
+        {
+        "input": "What is 'Open auxi.air delay' in blowing parameters?",
+        "expected_output": "It's the delay before the auxiliary air opens, measured in milliseconds (ms)."
+        },
+        {
+        "input": "What is 'Close auxi.air delay' in blowing parameters?",
+        "expected_output": "It's the delay before the auxiliary air closes, measured in milliseconds (ms)."
+        },
+        {
+        "input": "What is 'XY Reset speed' in reset speed parameters?",
+        "expected_output": "It's the speed for resetting the X and Y axes, measured in mm/s."
+        },
+        {
+        "input": "What is 'U Reset speed' in reset speed parameters?",
+        "expected_output": "It's the speed for resetting the U axis, measured in mm/s."
+        },
+        {
+        "input": "What is 'U work speed' in reset speed parameters?",
+        "expected_output": "It's the working speed for the U axis, measured in mm/s."
+        },
+        {
+        "input": "What is 'Manual fast' in reset speed parameters?",
+        "expected_output": "It's the fast manual movement speed, measured in mm/s."
+        },
+        {
+        "input": "What is 'Manual slow' in reset speed parameters?",
+        "expected_output": "It's the slow manual movement speed, measured in mm/s."
+        },
+        {
+        "input": "What is 'Reset to origin' in machine configuration?",
+        "expected_output": "It's a setting that determines if the machine resets to the origin, typically 'YES' or 'NO'."
+        },
+        {
+        "input": "What is 'Return position' in machine configuration?",
+        "expected_output": "It's a setting for where the machine returns, such as 'Origin pos'."
+        },
+        {
+        "input": "What is 'Origin on overscale' in machine configuration?",
+        "expected_output": "It's a setting related to the origin when exceeding scale, typically 'YES' or 'NO'."
+        },
+        {
+        "input": "What is 'U Focus distance' in machine configuration?",
+        "expected_output": "It's the focus distance for the U axis, measured in mm."
+        },
+        {
+        "input": "What is 'Enable rotary Func' in rotation function settings?",
+        "expected_output": "It enables or disables the rotary function, typically 'YES' or 'NO'."
+        },
+        {
+        "input": "What is 'PPR' in rotation function settings?",
+        "expected_output": "PPR stands for Pulses Per Revolution, a parameter in rotation settings."
+        },
+        {
+        "input": "What is 'Diameter' in rotation function settings?",
+        "expected_output": "It's the diameter setting for the rotary function, measured in mm."
+        },
+        {
+        "input": "How do you backup parameters to a USB disk?",
+        "expected_output": "In the main menu, select 'Controller Settings', then 'Backup to U disk'."
+        },
+        {
+        "input": "How do you restore parameters from a USB flash drive?",
+        "expected_output": "In the main menu, select 'Controller Settings', then 'Restore para from U disk'."
+        },
+        {
+        "input": "How do you upgrade the controller software from a USB flash drive?",
+        "expected_output": "In the main menu, select 'Controller Settings', then 'Upgrade from U disk'."
+        },
+        {
+        "input": "How do you set the date and time of the machine?",
+        "expected_output": "In the 'Controller Settings' submenu, select 'Time Settings+'. Use arrow keys to adjust parameters and ENT to save."
+        },
+        {
+        "input": "What is the recommended focal length for a focusing lens with a 60W-100W laser tube?",
+        "expected_output": "It is recommended to use a focusing lens with a focal length of 50.8."
+        },
+        {
+        "input": "What is the recommended power range for cutting with a 60W-100W laser tube and a small air compressor?",
+        "expected_output": "It is recommended to cut at 50%-70% power."
+        },
+        {
+        "input": "What is the fastest speed for cutting 3mm acrylic with a 50W laser?",
+        "expected_output": "The fastest speed is 15mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 3mm acrylic with a 50W laser?",
+        "expected_output": "The optimal speed is 10mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 5mm acrylic with a 60W laser?",
+        "expected_output": "The fastest speed is 10mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 5mm acrylic with a 60W laser?",
+        "expected_output": "The optimal speed is 7mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 8mm acrylic with an 80W laser?",
+        "expected_output": "The fastest speed is 9mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 8mm acrylic with an 80W laser?",
+        "expected_output": "The optimal speed is 5mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 10mm acrylic with a 100W laser?",
+        "expected_output": "The fastest speed is 10mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 10mm acrylic with a 100W laser?",
+        "expected_output": "The optimal speed is 6mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 15mm acrylic with a 130W laser?",
+        "expected_output": "The fastest speed is 7mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 15mm acrylic with a 130W laser?",
+        "expected_output": "The optimal speed is 4mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 2mm PVC with a 50W laser?",
+        "expected_output": "The fastest speed is 35mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 2mm PVC with a 50W laser?",
+        "expected_output": "The optimal speed is 32mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 3mm PVC with a 60W laser?",
+        "expected_output": "The fastest speed is 40mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 3mm PVC with a 60W laser?",
+        "expected_output": "The optimal speed is 38mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 4mm PVC with an 80W laser?",
+        "expected_output": "The fastest speed is 45mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 4mm PVC with an 80W laser?",
+        "expected_output": "The optimal speed is 40mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting cloth with a 50W laser?",
+        "expected_output": "The fastest speed is 40mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting cloth with a 50W laser?",
+        "expected_output": "The optimal speed is 38mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting leather with a 50W laser?",
+        "expected_output": "The fastest speed is 15mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting leather with a 50W laser?",
+        "expected_output": "The optimal speed is 12mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting paper with a 50W laser?",
+        "expected_output": "The fastest speed is 80mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting paper with a 50W laser?",
+        "expected_output": "The optimal speed is 40mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 2mm Black-color plate with a 50W laser?",
+        "expected_output": "The fastest speed is 15mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 2mm Black-color plate with a 50W laser?",
+        "expected_output": "The optimal speed is 13mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 3mm wood with a 50W laser?",
+        "expected_output": "The fastest speed is 9mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 3mm wood with a 50W laser?",
+        "expected_output": "The optimal speed is 7mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 5mm wood with a 60W laser?",
+        "expected_output": "The fastest speed is 10mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 5mm wood with a 60W laser?",
+        "expected_output": "The optimal speed is 8mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 10mm wood with an 80W laser?",
+        "expected_output": "The fastest speed is 9mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 10mm wood with an 80W laser?",
+        "expected_output": "The optimal speed is 6mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 15mm wood with a 100W laser?",
+        "expected_output": "The fastest speed is 12mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 15mm wood with a 100W laser?",
+        "expected_output": "The optimal speed is 9mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 20mm wood with a 130W laser?",
+        "expected_output": "The fastest speed is 15mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 20mm wood with a 130W laser?",
+        "expected_output": "The optimal speed is 10mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 25mm wood with a 150W laser?",
+        "expected_output": "The fastest speed is 18mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 25mm wood with a 150W laser?",
+        "expected_output": "The optimal speed is 12mm/s."
+        },
+        {
+        "input": "What is the fastest speed for cutting 30mm wood with a 150W laser?",
+        "expected_output": "The fastest speed is 21mm/s."
+        },
+        {
+        "input": "What is the optimal speed for cutting 30mm wood with a 150W laser?",
+        "expected_output": "The optimal speed is 15mm/s."
+        },
+        {
+        "input": "What is the total power consumption for the KH5030 model?",
+        "expected_output": "The total power consumption for the KH5030 model is 420W."
+        },
+        {
+        "input": "What is the laser power for the KH6040 model?",
+        "expected_output": "The laser power for the KH6040 model is 60W."
+        },
+        {
+        "input": "What is the working area for the KH7050 model?",
+        "expected_output": "The working area for the KH7050 model is 700mm x 500mm."
+        },
+        {
+        "input": "What is the engraving speed range for the VEVOR laser engraver?",
+        "expected_output": "The engraving speed range is 0-500mm/s."
+        },
+        {
+        "input": "What type of workbench platform does the VEVOR engraver use?",
+        "expected_output": "The VEVOR engraver uses a cellular platform workbench."
+        },
+        {
+        "input": "What is the cutting speed range for the VEVOR laser engraver?",
+        "expected_output": "The cutting speed range is 0-400mm/s."
+        },
+        {
+        "input": "What is the purpose of the 'Time Seting+' option in the Controller Settings menu?",
+        "expected_output": "It allows setting the date and time of the machine."
+        },
+        {
+        "input": "What is the 'Panel lock' option in the function menu for?",
+        "expected_output": "It allows setting a password for the control panel."
+        },
+        {
+        "input": "What does 'System info' in the function menu display?",
+        "expected_output": "It displays system information about the machine."
+        },
+        {
+        "input": "What does 'Axes reset' in the function menu do?",
+        "expected_output": "It allows resetting the X, Y, and U axes of the machine."
+        },
+        {
+        "input": "What is the 'Screen ref set' in the function menu for?",
+        "expected_output": "It allows setting the screen reference or origin position on the display."
+        },
+        {
+        "input": "What is the 'Controller set' in the function menu for?",
+        "expected_output": "It allows various controller settings, including backup, restore, and upgrade functions."
+        },
+        {
+        "input": "What is the 'Permission' option in the function menu for?",
+        "expected_output": "It is for authorization management and entering license codes, especially for rental programs."
+        },
+        {
+        "input": "How do you clean the focusing lens?",
+        "expected_output": "Move the engraving table below the lens, move the laser head to the center, unscrew the lens mount, remove the lens, blow off coarse dust, and then clean with lens cleaning solution and paper/cloth."
+        },
+        {
+        "input": "What is the correct orientation when reinserting the focusing lens?",
+        "expected_output": "The circular convex side of the lens should be facing up."
+        },
+        {
+        "input": "How do you clean the mirrors?",
+        "expected_output": "Mirrors can be cleaned in place using lens cleaning tissues or cloths, or removed by rotating counterclockwise. Avoid touching the surface directly or pressing too hard."
+        },
+        {
+        "input": "Where are the first, second, and third mirrors located?",
+        "expected_output": "The first mirror is behind the left side of the machine, the second is on the Y-axis at the left end of the X-axis, and the third is on top of the laser head on the X-axis."
+        },
+        {
+        "input": "Why is proper beam alignment important?",
+        "expected_output": "Proper beam alignment is very important for the overall efficiency and quality of work of the machine."
+        },
+        {
+        "input": "At what power level should beam alignment be performed?",
+        "expected_output": "Beam alignment should be performed at low power levels: 15% or less, to avoid igniting the test strip."
+        },
+        {
+        "input": "How do you test the alignment of the laser tube with the first mirror?",
+        "expected_output": "Cut a strip of tape and place it on the frame of the first mirror (not directly on it). Set power to 15% or lower, then press PULSE to fire the laser and observe the mark on the tape."
+        },
+        {
+        "input": "What should be done if the laser mark is not centered on the first mirror?",
+        "expected_output": "Cut off laser power and carefully adjust the laser tube in its holder, potentially by loosening bolts on its bracket. Adjust only one stand at a time."
+        },
+        {
+        "input": "How do you align the first mirror with the second mirror?",
+        "expected_output": "Send the second mirror to the back of the bed along the Y-axis, place tape on its frame, fire the laser, and adjust the set screws of the first mirror if the laser is not centered on the second mirror."
+        },
+        {
+        "input": "How do you align the second mirror with the third mirror?",
+        "expected_output": "After aligning the 1st and 2nd mirrors, remove the air assist hose from the laser head, place tape on the bottom of the laser head (firmly against the nozzle), fire the laser, and adjust the set screw of the third mirror if the laser is not centered."
+        },
+        {
+        "input": "What are the common causes for the laser always outputting at maximum power or having unadjustable current?",
+        "expected_output": "Causes include an incorrectly connected power control terminal, a power supply failure, or a failure of the laser machine's control board."
+        },
+        {
+        "input": "What are the common causes for the laser not emitting light?",
+        "expected_output": "Causes include an incorrectly connected power control terminal, a broken control connection line, chiller water protection failure, insufficient chiller coolant, laser power failures, or a control board failure."
+        },
+        {
+        "input": "What are the common causes for discharge ignition?",
+        "expected_output": "Causes include a damaged or broken connection line between the laser and its power supply, or laser failure."
+        },
+        {
+        "input": "What are the environmental requirements for operating the laser engraver?",
+        "expected_output": "Operating temperature: 10°C to 38°C. Storage temperature: -10°C to 35°C. Storage humidity: 20%RH to 80%RH. It needs to be in a well-ventilated environment meeting local safety standards."
+        },
+        {
+        "input": "How often should the rails of the engraving machine be lubricated?",
+        "expected_output": "The rails should be cleaned and lubricated at least twice a month."
+        },
+        {
+        "input": "How do you lubricate the rails and screws?",
+        "expected_output": "Turn off the machine, wipe all dust and debris off the X- and Y-axis rails and Z-axis screws with a dry cotton cloth until clean, then lubricate with grease. Gently move the laser head and X-axis, and raise/lower the bed to distribute lubricant evenly."
+        },
+        {
+        "input": "What should be done if the panel indicates the machine is protected or has a water ingress protection defect?",
+        "expected_output": "Close the door, replace a damaged cover protection switch, clean clogged water pipes, replace a broken pump, or replace impaired water resistance components."
+        },
+        {
+        "input": "What should be done if the panel prompts a 'working hyper interface'?",
+        "expected_output": "Resize the image or retarget the machine anchor point."
+        },
+        {
+        "input": "What should be done if laser cutting is impermeable?",
+        "expected_output": "Adjust the optical path, wash mirrors and lenses with alcohol, or replace the laser tube."
+        },
+        {
+        "input": "What should be done if the laser does not emit light?",
+        "expected_output": "Check terminal connections, replace water protector, add coolant, replace power supply/cord, or contact customer service for laser/control board failure."
+        },
+        {
+        "input": "What should be done if there is discharge ignition?",
+        "expected_output": "Replace the cable or contact customer service for laser failure."
+        },
+        {
+        "input": "What should be done if the Y-axis does not move?",
+        "expected_output": "Reposition the relay, replace it with a new one, or turn off the rotary switch."
+        },
+        {
+        "input": "What should be done if the scan panel indicates insufficient buffer distance?",
+        "expected_output": "Reposition the X-axis laser head so that it is 50 mm away from the origin."
+        },
+        {
+        "input": "What should be done if the reset switch on the machine does not function?",
+        "expected_output": "Replace with a new red limit switch."
+        },
+        {
+        "input": "What is the recommended power for engraving ceramics?",
+        "expected_output": "Medium to high power is generally used. Using more circuits instead of higher power and lower speed can help avoid material breakage."
+        },
+        {
+        "input": "What are the health risks associated with ceramic engraving?",
+        "expected_output": "Be aware of health risks from dust, especially for repetitive industrial applications. Respiratory PPE (masks/respirators) and/or a complete ventilation system may be required."
+        },
+        {
+        "input": "What is the recommended power and speed for carving stone?",
+        "expected_output": "Medium power and medium to fast speeds are generally used."
+        },
+        {
+        "input": "What are the considerations for dust when carving stone?",
+        "expected_output": "As with ceramics and glass, be aware of the dust generated (especially for repetitive industrial applications) and take similar measures to ensure safety."
+        },
+        {
+        "input": "What is the recommended power and speed for carving textiles?",
+        "expected_output": "Low power and high speed are often used."
+        },
+        {
+        "input": "What special attention is needed when carving textiles?",
+        "expected_output": "Special attention should be paid to the possibility of fire and dust."
+        },
+        {
+        "input": "What is the recommended power and speed for engraving glass?",
+        "expected_output": "High power and low speed are generally used. Running more cycles on a lower setting can help avoid cracks."
+        },
+        {
+        "input": "What care must be taken when engraving glass and carbon fibers?",
+        "expected_output": "Care must be taken to avoid combining settings that produce laser intensity sufficient to disrupt structural integrity, resulting in blurred markings. Wear PPE for dust exposure."
+        },
+        {
+        "input": "Can CO2 laser engraving machines be used to mark or cut metal?",
+        "expected_output": "No, CO2 laser engraving machines should not be used to mark, engrave, or cut metal. They are best suited for working coatings applied to metal substrates."
+        },
+        {
+        "input": "How should aluminum coatings on metal be engraved?",
+        "expected_output": "Aluminum coatings should generally be done faster at a lower power."
+        },
+        {
+        "input": "How should steel coatings on metal be engraved?",
+        "expected_output": "Steel coatings can be done more slowly at a higher power."
+        },
+        {
+        "input": "What are the general settings for engraving plastics?",
+        "expected_output": "Low-power, high-speed settings are generally used."
+        },
+        {
+        "input": "What problems can occur if too much power or too low a speed is used when engraving plastics?",
+        "expected_output": "Too much energy can concentrate at the point of contact, causing the plastic to melt, leading to poor carving quality, toxic fumes, and even fires."
+        },
+        {
+        "input": "What type of plastics provide the best engraving results?",
+        "expected_output": "Plastics with microporous surfaces seem to provide the best results because less surface material needs to be removed."
+        },
+        {
+        "input": "What is the recommended approach for engraving rubber?",
+        "expected_output": "A consistent high-power setting is often used, and the effect is created by varying the speed of the laser. Testing samples of specific rubber is highly recommended."
+        },
+        {
+        "input": "What considerations are there for dust and gases when engraving rubber?",
+        "expected_output": "Engraving any type of rubber produces a lot of dust and gases. Breathing PPE and/or a complete ventilation system may be required depending on the workload."
+        },
+        {
+        "input": "What are the general settings for engraving paper and cardboard?",
+        "expected_output": "Low to medium power and fast speed are generally used."
+        },
+        {
+        "input": "What care must be taken when engraving paper products?",
+        "expected_output": "Test samples per batch, as small parameter differences can distinguish between too light an effect and burning through the substrate. Pay special attention to fire risk and dust."
+        },
+        {
+        "input": "What is important when carving different types of wood?",
+        "expected_output": "Testing your specific material is essential for best results. Wood carvings with consistent grain and color are more uniform. Knotted wood creates uneven effects, while resin wood creates greater edge contrast."
+        },
+        {
+        "input": "How do softwoods generally carve?",
+        "expected_output": "Some softwoods (balsa, cork, pine) carve well (albeit with low contrast) at low or medium power settings and high speeds."
+        },
+        {
+        "input": "How do hardwoods generally carve?",
+        "expected_output": "Hardwoods such as cherry and oak carve well at high power settings and low speeds."
+        },
+        {
+        "input": "What are the risks associated with artificial wood products?",
+        "expected_output": "Extra care must be taken with smoke from glue, as some are too dangerous to use, while others require careful ventilation and breathable PPE for repetitive industrial applications. Wood toxicity should also be checked."
+        },
+        {
+        "input": "What is the total power for the KH6040 model?",
+        "expected_output": "The total power for the KH6040 model is 680W."
+        },
+        {
+        "input": "What is the laser power for the KH7050 model?",
+        "expected_output": "The laser power for the KH7050 model is 80W."
+        },
+        {
+        "input": "What is the working area for the KH9060 model?",
+        "expected_output": "The working area for the KH9060 model is 900mm x 600mm."
+        },
+        {
+        "input": "What is the laser power for the KH1490 model?",
+        "expected_output": "The laser power for the KH1490 model is 130W."
+        },
+        {
+        "input": "What is the total power for the KH1490 model?",
+        "expected_output": "The total power for the KH1490 model is 900W."
+        },
+        {
+        "input": "What is the laser model for the 50W laser power?",
+        "expected_output": "The laser model is KH-LT50."
+        },
+        {
+        "input": "What is the laser model for the 60W laser power?",
+        "expected_output": "The laser model is KH-LT60."
+        },
+        {
+        "input": "What is the laser model for the 80W laser power?",
+        "expected_output": "The laser model is R3."
+        },
+        {
+        "input": "What is the laser model for the 100W laser power?",
+        "expected_output": "The laser model is R5."
+        },
+        {
+        "input": "What is the laser model for the 130W laser power?",
+        "expected_output": "The laser model is R7."
+        },
+        {
+        "input": "What is the input voltage for the VEVOR laser engraver models?",
+        "expected_output": "The input voltage is AC 120V or AC 230V across all models listed."
+        },
+        {
+        "input": "What is the working area for the KH5030 model?",
+        "expected_output": "The working area for the KH5030 model is 500mm x 300mm."
+        },
+        {
+        "input": "What is the working area for the KH6040 model?",
+        "expected_output": "The working area for the KH6040 model is 600mm x 400mm."
+        },
+        {
+        "input": "What is the working area for the KH1490 model?",
+        "expected_output": "The working area for the KH1490 model is 1400mm x 900mm."
+        }
+    ]
+}

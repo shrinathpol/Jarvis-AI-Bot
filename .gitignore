@@ -1,0 +1,21 @@
+# Python-specific files to ignore
+__pycache__/
+*.pyc
+
+# Virtual environment folder
+jarvis_venv/
+
+# Cache files
+data/online_cache.json
+offline_model_trainer/models/offline_model.pkl
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Python artifacts
+__pycache__/
+*.pyc
