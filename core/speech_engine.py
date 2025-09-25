@@ -51,7 +51,7 @@ def take_command(lang):
     r = sr.Recognizer()
     
     # Replace '1' with the device index of your microphone if it's not working
-    mic_index = 1
+    mic_index = 7
     
     try:
         with sr.Microphone(device_index=mic_index, channels=1) as source:
