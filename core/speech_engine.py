@@ -7,9 +7,9 @@ import soundfile as sf
 import numpy as np
 import os
 import queue
-import threading
 import time
 import sys
+import logging
 
 # --- Debugging Function ---
 def list_microphones():
@@ -23,13 +23,16 @@ def list_microphones():
     return devices
 # --- End of New Function ---
 
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 # ----------------------------
 # Text-to-Speech (TTS) Engine
 # ----------------------------
 
 # Define available TTS models for different languages
 TTS_MODELS = {
-    "en": "tts_models/en/vctk/vits",  # English
+    "en": "tts_models/en/ljspeech/vits",  # English
     "hi": "tts_models/hi/vctk/vits"   # Hindi
 }
 tts_instances = {}  # Cache for initialized TTS models
@@ -49,9 +52,9 @@ def speak(text: str, lang: str = "en", speed: float = 1.2):
             if not model_name:
                 print(f"No TTS model found for language: {lang}")
                 return
-            print(f"Initializing TTS model for {lang}...")
+            logging.info(f"Initializing TTS model for {lang}...")
             tts_instances[lang] = TTS(model_name).to(device)
-            print("TTS model initialized.")
+            logging.info("TTS model initialized.")
 
         tts = tts_instances[lang]
         temp_file = "temp_output.wav"
@@ -61,7 +64,7 @@ def speak(text: str, lang: str = "en", speed: float = 1.2):
         sd.wait()
         os.remove(temp_file)
     except Exception as e:
-        print(f"Error in TTS engine for language {lang}: {e}")
+        logging.error(f"Error in TTS engine for language {lang}: {e}")
 
 # ----------------------------
 # Speech-to-Text (STT) Engine
@@ -69,7 +72,7 @@ def speak(text: str, lang: str = "en", speed: float = 1.2):
 
 try:
     whisper_model = whisper.load_model("small")
-except Exception as e:
+except Exception as e: # Catching a more general exception for robustness
     print(f"Error loading Whisper model: {e}")
     whisper_model = None
 
@@ -82,7 +85,7 @@ def take_command(timeout: int = 5, device_index: int = None, language: str = "en
     """
     if whisper_model is None:
         print("Whisper recognizer is not available.")
-        return "none"
+        return "none" # Return "none" as a string, not a boolean
 
     q = queue.Queue()
 
@@ -101,7 +104,7 @@ def take_command(timeout: int = 5, device_index: int = None, language: str = "en
             device=device_index
         ):
             print(f"🎤 Listening in {language}...")
-            
+
             start_time = time.time()
             audio_data = []
             while time.time() - start_time < timeout:
@@ -118,12 +121,12 @@ def take_command(timeout: int = 5, device_index: int = None, language: str = "en
             audio_np = np.concatenate(audio_data, axis=0).astype(np.float32) / 32768.0
 
             # Transcribe
-            result = whisper_model.transcribe(audio_np, language=language, fp16=torch.cuda.is_available())
+            result = whisper_model.transcribe(audio_np, language=language, fp16=torch.cuda.is_available()) # Use fp16 if CUDA is available
             return result.get("text", "").lower()
 
     except Exception as e:
-        print(f"❌ Error during microphone input: {e}")
-        print("Please check your microphone and its settings.")
+        logging.error(f"❌ Error during microphone input: {e}")
+        logging.error("Please check your microphone and its settings.")
         return "none"
 
 if __name__ == "__main__":

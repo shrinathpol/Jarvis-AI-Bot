@@ -1,98 +1,174 @@
 import cv2
-from ultralytics import YOLO
-import os
-import time
 import threading
+from ultralytics import YOLO
+from core.offline_mode import get_cnc_explanation
 from core.speech_engine import speak
-from .config import YOLO_MODEL_PATH, DETECTION_COOLDOWN
 
-def handle_button_detection(button_class, last_detection_time):
-    """Handles the event of a button detection with a cooldown."""
-    current_time = time.time()
-    if (current_time - last_detection_time) > DETECTION_COOLDOWN:
-        speak(f"I see a {button_class}. What would you like to do?")
-        return current_time
-    return last_detection_time
+class CameraHandler:
+    def __init__(self, model_path="models/best.pt"):
+        self.model_path = model_path
+        self.model = self._load_model()
+        self.speak_thread = None
 
-def run_live_assistance(stop_event: threading.Event):
-    """Runs the live assistance mode with camera and YOLO detection."""
-    print("Attempting to start live assistance...")
-    if not os.path.exists(YOLO_MODEL_PATH):
-        print(f"Error: YOLO model not found at {YOLO_MODEL_PATH}")
-        speak("I can't start the live assistance because the detection model is missing.")
-        return
+    def _load_model(self):
+        try:
+            model = YOLO(self.model_path)
+            return model
+        except Exception as e:
+            print(f"Error loading model: {e}. Ensure '{self.model_path}' exists.")
+            print("Falling back to a general YOLO model.")
+            return YOLO("yolov8n.pt")
 
-    cap = None
-    try:
-        model = YOLO(YOLO_MODEL_PATH)
-        print("YOLO model loaded successfully.")
+    def start_live_assistance(self, stop_event):
+        """
+        Opens camera, continuously detects objects, and speaks their explanations.
+        This function is designed to be run in a separate thread.
+        """
+        cap = cv2.VideoCapture(0)
+        if not cap.isOpened():
+            speak("Error: Could not open camera.")
+            print("Error: Could not open camera.")
+            return
+
+        last_detected_name = None
         
-        # Attempt to find a working camera
-        print("Searching for a webcam...")
-        for i in range(5):
-            print(f"Probing camera index {i}...")
-            cap = cv2.VideoCapture(i)
-            if cap and cap.isOpened():
-                print(f"Success! Webcam found and opened at index {i}.")
-                break
-            else:
-                print(f"Camera index {i} failed to open or is not available.")
-                if cap:
-                    cap.release() # Release cap if it was created but not opened
+        print("--- LIVE ASSISTANCE MODE ---")
+        print("Say 'stop' or 'exit' to quit.")
         
-        if not cap or not cap.isOpened():
-            speak("I could not open the webcam. Please ensure it is connected and not in use by another application.")
-            raise IOError("Could not open webcam. Please ensure it's connected and not in use.")
-
-        last_detection_time = 0
-        cv2.namedWindow("Live Assistance", cv2.WINDOW_NORMAL)
-        print("Starting main camera loop...")
-        frame_count = 0
-
         while not stop_event.is_set():
-            success, frame = cap.read()
-            if not success:
-                print("Warning: Failed to grab frame. Retrying...")
-                time.sleep(0.5) # A slightly longer pause might help with driver issues
-                continue
-            
-            frame_count += 1
-            if frame_count % 30 == 0: # Log every 30 frames
-                print(f"Successfully processed {frame_count} frames.")
-
-            # Perform inference
-            results = model(frame, verbose=False)
-            
-            # Annotate the frame with detection results
-            annotated_frame = results[0].plot()
-
-            # Process detections
-            detected_classes = {model.names[int(box.cls[0])] for result in results for box in result.boxes if box.cls}
-
-            if detected_classes:
-                # For simplicity, announce the first detected class, then apply cooldown
-                last_detection_time = handle_button_detection(list(detected_classes)[0], last_detection_time)
-            
-            # Display the output
-            cv2.imshow("Live Assistance", annotated_frame)
-            
-            # Check for 'q' to quit, non-blocking
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                print("'q' pressed, stopping live assistance.")
+            ret, frame = cap.read()
+            if not ret: 
                 break
-    
-    except (IOError, Exception) as e:
-        print(f"An error occurred during live assistance: {e}")
-        speak("An unexpected error occurred with the camera. Please check the console for details.")
+            
+            results = self.model(frame, verbose=False)
+            
+            detected_name = None
+            for r in results:
+                for box in r.boxes:
+                    x1, y1, x2, y2 = map(int, box.xyxy[0])
+                    cls = int(box.cls[0])
+                    current_name = self.model.names[cls]
+                    
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                    cv2.putText(frame, current_name, (x1, y1 - 10), 
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+                    
+                    detected_name = current_name
 
-    finally:
-        print("Closing down live assistance...")
-        if cap and cap.isOpened():
-            cap.release()
-            print("Webcam released.")
+            cv2.imshow('Live Assistance', frame)
+
+            if detected_name and detected_name != last_detected_name:
+                last_detected_name = detected_name
+                explanation = get_cnc_explanation(detected_name)
+                
+                if self.speak_thread is None or not self.speak_thread.is_alive():
+                    self.speak_thread = threading.Thread(target=speak, args=(f"I see {detected_name}. {explanation}",))
+                    self.speak_thread.start()
+
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                print("INFO: 'q' pressed, stopping live assistance from keyboard.")
+                stop_event.set()
+                break
+
+        cap.release()
         cv2.destroyAllWindows()
-        print("All OpenCV windows destroyed.")
-        # Ensure the stop event is set to terminate any related threads
-        if not stop_event.is_set():
-            stop_event.set()
-        print("Live assistance has stopped.")
+        
+        if self.speak_thread is not None and self.speak_thread.is_alive():
+            self.speak_thread.join()
+        
+        print("--- Live assistance ended. ---")
+
+    def scan_for_explanation(self):
+        """
+        Opens camera, draws boxes, and waits for user to press 'S' to select an object.
+        """
+        cap = cv2.VideoCapture(0)
+        detected_name = None
+        
+        print("--- SCAN MODE ---")
+        # ... (rest of the function remains the same, just needs to use self.model)
+        
+        while True:
+            ret, frame = cap.read()
+            if not ret: break
+            
+            results = self.model(frame, verbose=False)
+            
+            for r in results:
+                for box in r.boxes:
+                    x1, y1, x2, y2 = map(int, box.xyxy[0])
+                    cls = int(box.cls[0])
+                    current_name = self.model.names[cls]
+                    
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                    cv2.putText(frame, current_name, (x1, y1 - 10), 
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+                    
+                    detected_name = current_name
+
+            cv2.imshow('CNC Scanner - Press S to Select', frame)
+            
+            key = cv2.waitKey(1) & 0xFF
+            if key == ord('q'):
+                detected_name = None
+                break
+            if key == ord('s') and detected_name:
+                break
+
+        cap.release()
+        cv2.destroyAllWindows()
+        return detected_name
+
+    def verify_action(self, target_object_name):
+        """
+        Checks if the user is pointing at the specific target object.
+        """
+        cap = cv2.VideoCapture(0)
+        success = False
+        
+        print(f"--- VERIFICATION MODE ---")
+        # ... (rest of the function remains the same, just needs to use self.model)
+        
+        while True:
+            ret, frame = cap.read()
+            if not ret: break
+            
+            results = self.model(frame, verbose=False)
+            target_seen_in_frame = False
+            
+            for r in results:
+                for box in r.boxes:
+                    cls = int(box.cls[0])
+                    name = self.model.names[cls]
+                    
+                    x1, y1, x2, y2 = map(int, box.xyxy[0])
+                    
+                    if name == target_object_name:
+                        color = (0, 255, 0)
+                        target_seen_in_frame = True
+                        label = f"CORRECT: {name}"
+                    else:
+                        color = (0, 0, 255)
+                        label = f"WRONG: {name}"
+                    
+                    cv2.rectangle(frame, (x1, y1), (x2, y2), color, 3)
+                    cv2.putText(frame, label, (x1, y1-10), 
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
+
+            cv2.putText(frame, f"TARGET: {target_object_name}", (10, 50), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2)
+
+            cv2.imshow('Safety Verification', frame)
+            
+            key = cv2.waitKey(1) & 0xFF
+            if key == ord('q'):
+                break
+            
+            if target_seen_in_frame:
+                cv2.waitKey(500)
+                success = True
+                break
+
+        cap.release()
+        cv2.destroyAllWindows()
+        return success
