@@ -1,110 +1,151 @@
 # Srishti - Voice-Controlled Accessibility Assistant
 
-Srishti is a voice-controlled accessibility assistant designed to help users operate a physical machine (likely a laser cutter or CNC).
+**Srishti** is an intelligent, voice-controlled accessibility assistant designed to help users operate physical machinery (such as laser cutters or CNC machines) safely and independently.
 
-## Features
+It combines computer vision (YOLO) for real-time button identification with a hybrid Large Language Model architecture (Google Gemini + Offline Fallback) to answer user queries even when internet connectivity is unstable.
 
-- **Live Assistance:** Uses a webcam and a YOLO object detection model to identify and announce control panel buttons in real-time.
-- **Q&A:** Answers user questions using the Gemini API (online) or a local model (offline).
+---
 
-## Project Structure
+## 🏗️ System Architecture
 
-```
-├── augmentation
-│   ├── script.py
-│   └── saved
-├── core
-│   ├── camera_handler.py
-│   ├── command_handler.py
-│   ├── config.py
-│   ├── offline_mode.py
-│   └── speech_engine.py
-├── data
-│   ├── knowledge_base
-│   │   ├── my_data.json
-│   │   ├── new_training_data.json
-│   │   └── notes.txt
-│   └── online_cache.json
-├── offline_model_trainer
-│   ├── data
-│   │   ├── training_data.json
-│   │   └── validation_data.json
-│   ├── models
-│   │   └── offline_model.pkl
-│   ├── notebooks
-│   │   └── data_exploration.ipynb
-│   ├── src
-│   │   ├── data_processing.py
-│   │   ├── model_training.py
-│   │   ├── offline_inference.py
-│   │   ├── online_model_interface.py
-│   │   └── utils.py
-│   ├── config.yaml
-│   ├── README.md
-│   └── requirements.txt
-├── project
-│   ├── IMG_20250805_101742.jpg
-│   ├── IMG_20250805_101751.jpg
-│   ...
-├── runs
-│   └── detect
-├── test
-│   ├── test
-│   │   ├── images
-│   │   └── labels
-│   ├── train
-│   │   ├── images
-│   │   └── labels
-│   ├── valid
-│   │   ├── images
-│   │   └── labels
-│   ├── data.yaml
-│   ├── README.dataset.txt
-│   ├── README.roboflow.txt
-│   ├── train.py
-│   └── validate_labels.py
-├── .gitignore
-├── api_server.py
-├── config.py
-├── index.html
-├── main.py
-├── README.md
-├── requirements.txt
-├── test_mic.py
-└── test_speak.py
+The system follows a strict **Input → Process → Output** flow, featuring an automatic fallback to offline logic if the internet disconnects or if safety policies trigger.
+
+```mermaid
+graph TD
+    %% Nodes
+    User[User's Voice]
+    STT[Speech-to-Text (STT) Engine]
+    Core[Core Logic (main.py)]
+    
+    %% Vision Path
+    Cam[Camera Feed]
+    YOLO[Live Assistance Mode&lt;br/&gt;YOLO Object Detection]
+    
+    %% Text Path
+    NetCheck{Is Internet Connected?}
+    Gemini[Online Mode: Gemini API]
+    Offline[Offline Logic&lt;br/&gt;ML Classifier/Sentence Sim]
+    
+    %% Output Path
+    Response[Response Text Processor]
+    TTS[Text-to-Speech (TTS)&lt;br/&gt;pyttsx3]
+    Speaker[Spoken Output]
+
+    %% Connections
+    User --&gt; STT
+    STT --&gt; Core
+    
+    %% Logic Splitting
+    Core -- "User asks to see" --&gt; YOLO
+    Cam --&gt; YOLO
+    YOLO --&gt; Response
+    
+    Core -- "User asks question" --&gt; NetCheck
+    
+    NetCheck -- Yes --&gt; Gemini
+    NetCheck -- No --&gt; Offline
+    
+    %% Handling Gemini Errors/Safety
+    Gemini -- "Success" --&gt; Response
+    Gemini -- "Error / Policy Violation" --&gt; Offline
+    
+    Offline --&gt; Response
+    
+    %% Final Output
+    Response --&gt; TTS
+    TTS --&gt; Speaker
 ```
 
-## Setup
+-----
 
-1.  **Clone the repository:**
-    ```
-    git clone https://github.com/your-username/Srishti.git
-    ```
-2.  **Install dependencies:**
-    ```
-    pip install -r requirements.txt
-    ```
-3.  **Download Models:**
-    - Download the pre-trained YOLO model (`best.pt`) and place it in the `models` folder.
-    - Download the offline classification model (`offline_model.pkl`) and place it in the `offline_model_trainer/models` folder.
-    > **Note:** As the models are not provided in the repository, you will need to train them yourself. Refer to the `offline_model_trainer` for more information.
+## 🚀 Features
 
-## Usage
+  * **🎙️ Voice Command Interface:** Hands-free operation using Speech-to-Text and Text-to-Speech.
+  * **👁️ Live Visual Assistance:** Uses a webcam and a trained YOLO object detection model to identify control panel buttons and announce them in real-time.
+  * **🧠 Hybrid AI Intelligence:**
+      * **Online:** Uses Google Gemini API for complex reasoning and general Q\&A.
+      * **Offline:** Falls back to a local ML classifier for core command recognition when offline.
+  * **🛡️ Safety First:** Automatically routes to offline logic if online models return safety policy violations.
+
+-----
+
+## 📂 Project Structure
+
+```text
+Srishti/
+├── api_server.py           # Backend server for API handling
+├── main.py                 # Entry point of the application
+├── config.py               # Main configuration settings
+├── requirements.txt        # Project dependencies
+├── core/                   # Core application logic
+│   ├── camera_handler.py   # YOLO inference & webcam logic
+│   ├── command_handler.py  # Routes user intent
+│   ├── offline_mode.py     # Local ML fallback logic
+│   └── speech_engine.py    # TTS and STT handling
+├── data/                   # Knowledge base storage
+│   ├── knowledge_base/     # JSON/TXT files for RAG
+│   └── online_cache.json   # Caching for offline retrieval
+├── models/                 # Place your trained YOLO models here
+│   └── best.pt             # (User must provide this)
+├── offline_model_trainer/  # Tools to train the offline classifier
+│   ├── src/                # Training scripts
+│   ├── data/               # Training datasets
+│   └── models/             # Output folder for .pkl models
+└── test/                   # Testing scripts
+```
+
+-----
+
+## ⚙️ Setup & Installation
+
+### 1\. Clone the Repository
+
+```bash
+git clone [https://github.com/your-username/Srishti.git](https://github.com/your-username/Srishti.git)
+cd Srishti
+```
+
+### 2\. Install Dependencies
+
+Ensure you have Python 3.8+ installed.
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3\. Model Setup
+
+  * **YOLO Model:** Place your trained `best.pt` file inside a `models/` folder in the root directory.
+  * **Offline Classifier:** If you do not have the `offline_model.pkl`, navigate to `offline_model_trainer/` and run the training script (refer to documentation inside that folder).
+
+### 4\. API Configuration
+
+Create a `.env` file or update `config.py` with your Google Gemini API Key:
+
+```python
+# In config.py
+GOOGLE_API_KEY = "your_api_key_here"
+```
+
+-----
+
+## 💻 Usage
 
 1.  **Run the application:**
-    ```
+
+    ```bash
     python main.py
     ```
+
 2.  **Voice Commands:**
-    - "live assistance" - Activates the live assistance mode.
-    - "exit" - Exits the application.
 
-## Known Issues
+      * **"Live assistance"** - Activates the camera and reads out buttons visible on the machine panel.
+      * **"Stop" / "Exit"** - Closes the application.
+      * **General Questions** - Ask about machine operation (e.g., "How do I turn on the laser?").
 
-- The camera handler is inefficient and processes every frame.
-- The project lacks a centralized configuration.
-- The code uses a global dictionary for state management, which is not ideal.
+-----
 
+<<<<<<< HEAD
 
 
 
@@ -153,10 +194,20 @@ graph TD
     TTS --> Speaker
 
 ## TODO
+=======
+## ⚠️ Known Issues
+>>>>>>> 647fff0 (Update ignore list)
 
-- [ ] Refactor the camera handler to be more efficient and stable.
-- [ ] Implement a centralized configuration system.
-- [ ] Refactor the state management to use a class.
-- [ ] Create a `requirements.txt` file at the root level.
-- [ ] Clean up the project structure.
-- [ ] Add instructions on how to train the models.
+  - **Performance:** The `camera_handler` currently processes every frame, which may cause lag on lower-end devices. Needs optimization (skipping frames).
+  - **State Management:** Currently relies on a global dictionary; refactoring to a Class-based state manager is planned.
+  - **Configuration:** Config variables are currently scattered. A centralized `config.yaml` or `.env` system is in progress.
+
+## ✅ TODO Roadmap
+
+  - [ ] Refactor `camera_handler.py` for frame skipping/threading.
+  - [ ] Centralize configuration into a single `.env` loader.
+  - [ ] Replace global dictionary state with a Singleton `StateManager` class.
+  - [ ] Clean up project structure (merge `requirements.txt` files).
+  - [ ] Add documentation for training the custom YOLO model.
+
+&lt;!-- end list --&gt;
